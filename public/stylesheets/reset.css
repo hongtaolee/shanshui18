@@ -1,0 +1,387 @@
+/* -------------------------------------------------------------- 
+ 	reset.css
+	一些复杂的样式
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0}
+body { line-height:20px; font-family:"宋体"; font-size:12px}
+a img { border: none}
+#wrap{ width:980px; margin:0px auto; position:relative; background:url(../images/body.gif) repeat scroll center top; overflow:hidden}
+.mb15{ margin-bottom:15px}
+.mb11{ margin-bottom:11px}
+.ml5{ margin-left:5px}
+.mb5{ margin-bottom:5px}
+.left{ float:left}
+.right{ float:right}
+.h4c1{color:#8B6201; font-family:"华文楷体"; font-size:18px}
+.h4c2{color:#DA8A00; font-family:"华文楷体"; font-size:18px}
+.h4c3{color:#9FA100; font-family:"华文楷体"; font-size:18px}
+.h4c4{color:#4A7100; font-family:"华文楷体"; font-size:18px}
+.red{ color:#FF0000}
+.active{ color:#896311}
+.kt{ font-family:"华文楷体"}
+.center{ text-align:center}
+.cmsTable td.alignLeft{text-align:left}
+a:hover{ text-decoration:none}
+/*---------top----------*/
+#header{position:relative;float:left}
+	.top{ text-align:right; padding-right:50px; color:#353912; line-height:21px;background:url(../images/top/top.jpg) no-repeat left top}
+	.cms .top,.info .top{ text-align:right; padding-right:50px; color:#353912;height:26px; line-height:26px;background:url(../images/top/info_top.jpg) no-repeat left top}
+	.fun .top{ text-align:right; padding-right:50px; color:#353912;height:25px; line-height:25px;background:url(../images/top/fun_top.jpg) no-repeat left top}
+	.footer .top,.contact .top,.new_wrap .top{ text-align:right; padding-right:50px; color:#353912;height:22px; line-height:22px;background:url(../images/top/sub_top.jpg) no-repeat left top}
+	.food .top,.house .top{ text-align:right; padding-right:50px; color:#353912;height:22px; line-height:22px;background:url(../images/top/house_top.jpg) no-repeat left top}
+		.top a { color:#353912; text-decoration:none}
+		.logo{ float:left;display:inline;width:218px; height:94px;background:url(../images/top/logo.jpg) no-repeat left top}
+		.cms .logo,.info .logo{ float:left;display:inline;width:218px; height:93px;background:url(../images/top/info_logo.jpg) no-repeat left top}
+		.fun .logo{ float:left;display:inline;width:218px; height:93px;background:url(../images/top/fun_logo.jpg) no-repeat left top}
+		.logo ,.nav,.nav a{ float:left}
+ /*-- .index .logo{width:218px; height:107px; background:url(../images/top/logo1.jpg) no-repeat left top}*/
+	.mainNav{ width:762px; float:left}
+/*	.index .sidenav{ background:url(../images/top/top3.jpg) no-repeat left top; height:38px; float:left; padding-left:0px}*/
+		.sidenav{background:url(../images/top/sidenav.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.cms .sidenav,.info .sidenav{background:url(../images/top/info_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.fun .sidenav{background:url(../images/top/fun_side.jpg) no-repeat left top; width:100%; float:left; height:24px}
+		.footer .sidenav,.contact .sidenav,.new_wrap .sidenav{background:url(../images/top/sub_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.food .sidenav,.house .sidenav{background:url(../images/top/house_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.sidenav a{ background:url(../images/sda.gif) no-repeat left center; padding-left:15px; color:#516522; margin-left:10px; text-decoration:none}
+	.topimg{ float:left; width:100%} 
+		.topimg img{ float:left}
+  .nav{width:100%; height:48px; float:left;overflow:hidden}
+  .index .nav{background:url(../images/top/nav.jpg) no-repeat left top;}
+  .cms .nav,.info .nav{background:url(../images/top/info_nav.jpg) no-repeat left top; height:42px}
+  .house .nav{background:url(../images/top/house_nav.jpg) no-repeat left top; height:46px}
+  .food .nav{background:url(../images/top/food_nav.jpg) no-repeat left top; height:46px}
+  .footer .nav,.contact .nav{background:url(../images/top/contact_nav.jpg) no-repeat left top; height:47px}
+  .new_wrap .nav{background:url(../images/top/sub_nav.jpg) no-repeat left top; height:47px}
+  .fun .nav{background:url(../images/top/fun_nav.jpg) no-repeat left top; height:44px}
+	.nav ul li{ float:left; display:block; background-position:left top; background-repeat:no-repeat; height:47px}
+		.nav ul li a{ height:18px; margin-top:20px; display:block;width:75px}
+			.nav ul li.index a{ width:50px; margin-left:65px; display:inline}
+     .fun .nav ul li a{margin-top:15px}
+     .cms ul li a,.info .nav ul li a{margin-top:10px}
+      .indexnav{padding-left:60px}
+     .footer .indexnav,.contact .indexnav,.new_wrap .indexnav, .fun .indexnav,.food .indexnav,.house .indexnav{padding:0px 0px 0px 20px}
+     .footer .housenav,.contact .housenav,.new_wrap .foodnav, .new_wrap .housenav,.fun .housenav{padding:0px 20px}
+     .footer .foodnav,.contact .foodnav,.new_wrap .funnav{padding-left:20px}
+     .new_wrap .newsnav{padding-left:25px}
+      .footer .mynav,.contact .mynav{padding-left:40px}
+      .fun .funnav{padding-left:45px}
+      .food .foodnav{padding:0px 20px 0px 40px}
+      .house .housenav{padding:0px 20px 0px 30px}
+      .fun .newsnav,.house .newsnav{padding-left:25px}
+      .cms .indexnav,.info .indexnav{padding:0px 40px 0px 20px}
+      .cms .infonav,.info .infonav{padding-right:15px}
+        .nav ul li.indexnav a{width:60px}
+        .nav ul li.newsnav a{width:85px}
+      .housenav,.foodnav{padding:0px 10px}
+      .funnav{padding:0px 20px 0px 30px}
+      .newsnav{padding:0px 15px}
+      .mynav{padding-left:20px}
+    #subnav_new_wrap p{margin-left:310px}
+    #subnav_contact p{margin-left:430px}
+    #subnav_fun p{margin-left:405px}
+    #subnav_food p{margin-left:290px}
+    #subnav_house p{margin-left:180px}
+    #subnav_info p{margin-left:130px}
+    #subnav_footer p{margin-left:330px}
+/*---------content--------------*/
+#content{ width:100%; float:left; padding-bottom:30px}
+/*-----------首页----------------*/
+	.indexLeft{width:314px}
+	.indexCenter{ width:424px}
+	.indexRight{ width:242px}
+	.indexRight,.indexCenter,.indexLeft{ float:left; display:inline; overflow:hidden}
+	.box{ float:left}
+	h1{ margin-bottom:5px}
+	#content .infoBack p a:hover,.house table th a:hover,.messgeBox a:hover,.next a:hover,.quote a:hover,.sidenav a:hover,.top a:hover,#footer a:hover,#content .main a:hover{ text-decoration:underline}
+	.centerTop,.rightTop{ height:125px; margin-bottom:25px}
+  .leftTop{height:125px;margin-bottom:30px}
+		.leftTop .main ul{ list-style-type:none; margin-left:20px}
+			.leftTop .main ul li{ list-style-type:none}
+	.leftTop .main ul li, .box .main ul li a{ color:#4B6745; text-decoration:none}
+	.leftTop .main ul li a{ margin-left:5px}
+	.leftTop .main ul li{ background:url(../images/border.gif) no-repeat left bottom; padding:1px 5px}
+		.leftTop .main ul li span{ background:url(../images/li.gif) no-repeat left center; padding-left:5px; margin-left:3px} .main ul li a{ color:#4B6745; text-decoration:none}
+			.leftTop .main ul li a{ margin-left:5px}
+			.leftTop .main ul li{ background:url(../images/border.gif) no-repeat left bottom; padding:1px 5px}
+		.leftTop .main ul li span{ background:url(../images/li.gif) no-repeat left center; padding-left:5px; margin-left:3px}
+		.leftCenter{ height:155px; margin-bottom:10px}
+    .leftCenter h1{margin-bottom:0px}
+			.leftCenter .main{ margin-left:20px; padding-right:10px; color:#5A5846;font-size:12px}
+			.leftCenter a{ color:#2F7214; display:inline; text-decoration:none}
+		.leftBottom{ margin-left:20px; height:85px; display:inline}
+			.leftBottom img{ float:left; margin-right:6px}
+		.rightCenter,.centerCenter{ height:140px; margin-bottom:25px}
+			.centerBottom .main,.centerCenter .main,.centerTop .main{}
+			.centerCenter .left,.centerTop .left{ width:229px; overflow:hidden; margin-right:10px}
+				.centerCenter .left .leftImg,.centerTop .left .leftImg{ width:154px; height:101px;overflow:hidden; float:left}
+					.centerCenter .left .leftImg img,.centerTop .left .leftImg img{ margin-right:5px; margin-left:4px; border:none}
+				.centerCenter .left .rightImg,.centerTop .left .rightImg{ width:70px; overflow:hidden; float:left}
+					.centerCenter .left .rightImg img,.centerTop .left .rightImg img{ margin-bottom:4px; float:left; }
+			.centerCenter .rightBox,.centerTop .rightBox{ float:left; width:185px; overflow:hidden; margin-top:2px}
+			.centerCenter .right,.centerTop .right{ float:left; width:210px}
+      .centerCenter .rightBox h6,.centerTop .rightBox h6{ margin-top:3px; color:#575757; margin-bottom:3px; font-weight:normal}
+			.centerCenter .rightBox h5,.centerTop .rightBox h5{ color:#7B6606; font-size:14px}
+      
+		.centerBottom{}
+			.centerBottom .left{ margin-right:10px}
+			.centerBottom .rightBox{ padding-right:15px}	
+			.centerBottom a{color:#157A21; text-decoration:none; display:block;width:70px;float:left; margin-top:5px}
+		.rightTop{}
+			.rightCenter .main,.rightTop .main{ margin-left:4px}
+			.rightTop .left,.rightCenter .left{ margin-right:10px}
+				.rightTop .left img,.rightCenter .left img{ border:1px solid #fff}
+      .rightTop .rightBox,.rightCenter .rightBox{width:145px;overflow:hideen;float:left}
+		.rightBottom{}
+			.rightBottom .main{margin-left:5px; background:url(../images/top/minback4.jpg) no-repeat left top; width:236px; height:85px}
+			.rightBottom .left img{ margin-left:10px; margin-top:7px}	
+			.rightBottom .rightBox{ float:left; margin-left:10px; margin-top:7px}
+				.rightBottom .rightBox a{ color:#575757; display:block; padding-left:10px; background:url(../images/rb2.gif) no-repeat left center; text-decoration:none}
+	.new{ background:url(../images/new.gif) no-repeat right top scroll; padding-right:30px}
+/*------------山水简介-------------*/
+.info #content,.fun #content,.message #content{ background:url(../images/ib.gif) repeat-y left top; width:100%; float:left}
+.message #content{ background:url(../images/my.png) repeat-y left top; width:100%; float:left}
+.sideBox{ float:left; width:280px; overflow:hidden; padding-top:60px}
+	.sideBox h1{ margin-bottom:0px}
+		.sideAll li{ background:url(../images/li2.png) no-repeat left top; height:38px; width:100%}
+			.sideAll li a{ margin-left:45px; text-decoration:none; line-height:38px; font-size:13px; color:#516522}
+			.sideAll li a.active{ color:#896311}
+			.sideAll li a:hover{ text-decoration:underline}
+.mainBox{ float:left; width:700px; overflow:hidden}
+	.mainBox h2{ margin:5px 0px;font-family:'华文楷体'; font-size:24px; color:#7F9F27;}
+	.minNav{ float:left}
+		.minNav p{ text-align:right; margin-top:30px}
+	.mainBox .mainAll{ padding-right:43px}
+		.minNav a{ color:#666; text-decoration:none}
+		h3{ text-align:center; line-height:20px; font-size:20px; margin-top:30px; color:#565944}
+		.time{ text-align:right}
+		.mainBox .mainAll p{ margin-bottom:30px; text-indent:28px; font-size:14px}
+		.mainBox .mainAll p.next,.mainBox .mainAll p.quote{ text-indent:0px}
+			.next a,.quote a{ text-decoration:none}
+			.next,.next a{ color:#8B929C}
+			.quote a{ color:#698EAB}
+#content .funText,#content .infoText{ float:left; padding:20px; width:637px}
+#content .funText h4,#content .infoText h4{ float:left;text-align:center; padding:20px; width:637px}
+	#content .infoText p{ margin-bottom:5px; text-indent:0px}
+  #content .infoText img{text-align:center; margin:0px auto}
+.info .mainAll{ width:700px; float:left;padding-right:0px}
+ .info #content .mainAll h4{color:#555F95;font-family:"华文楷体";width:100%;float:left;font-size:18px;text-align:center;margin:0px}
+ .info .mainAll p{text-indent:0px;}
+#content .noneIndent{ margin-bottom:10px}
+.info .messgeList{width:570px; margin-left:77px}
+#content .messgeBox p{margin-bottom:5px;width:100%;float:left}
+.info .mainAll h4,.funText h4{color:#DA8A00;font-family:"华文楷体";font-size:18px;text-align:center;margin:20px 0px}
+		.funText h4{ margin-top:0px}
+		.funText img{ text-align:center; margin:0px auto}
+/*-----------旅游信息---------------*/
+.fun #content{ background:url(../images/top/house13.jpg) repeat-y left top}
+.fun .sidenav{ background:url(../images/top/fun2_3.jpg) no-repeat left top; height:23px}
+	.fun .sidenav p{ margin-left:430px}
+.fun .sideBox{ background:url(../images/top/fun2_10.jpg) no-repeat left top}
+.fun .minNav{ background:url(../images/top/fun2_11.jpg) no-repeat left top; height:50px; width:657px}
+.fun .mainAll{ float:left; margin-left:30px; padding-bottom:30px}
+.fun #content .funText{margin-left:30px;padding:0px 43px 20px 0px;width:627px}
+.fun #content .focusBox p{ text-indent:28px}
+	.fun .mainAll table{ margin:20px 0px 30px}
+	.fun .box{ padding-bottom:30px; color:#4A5234; width:100%}
+	.fun .rightBox{ float:left}
+		.fun #content p{ text-indent:0px; margin-bottom:0px;width:100%;float:left;line-height:25px}
+		.fun h4{ margin-bottom:15px}
+		.fun h4 a{ text-decoration:none}
+		.fun h4 a:hover{ text-decoration:underline}
+		.fun h4 img{ vertical-align:middle; margin-left:-5px}
+		.fun h4.mb11{ margin-bottom:5px}
+	.fun .mainAll h2{ margin-top:20px; margin-bottom:10px}
+	.mainText{ margin-left:20px; padding-bottom:30px}
+		.fun #content .mainText h2{ margin-left:20px}
+		.fun #content .mainText p{ margin-left:20px; text-indent:28px}
+		.fun #content .mainText p.center{ margin:10px 0px}
+			.fun #content .mainText p.center img{ border:2px solid #000}
+/*-------------联系我们----------------*/
+.contact{}
+	.footer #content,.contact #content{ background:url(../images/top/lxwm_100.jpg) no-repeat left top}
+	.footer .sidenav,.contact .sidenav{ background:url(../images/top/lxwm_3.jpg) no-repeat left top; height:28px}
+		.footer .aidenav p,.contact .sidenav p{ margin-left:400px}
+	.contact .sideBox,.footer .sideBox{ background:url(../images/top/lxwm_10.jpg) no-repeat left top}
+	.footer .minNav,.contact .minNav{ background:url(../images/top/lxwm_11.jpg) no-repeat left top; width:657px; height:51px}
+	.footer .mainAll,.contact .mainAll{ float:left; margin-top:20px}
+	.footer .box,.contact .box{ float:left;display:inline;width:637px;overflow:hidden; margin-bottom:30px; margin-left:20px}
+		.footer .box h5,.contact .box h5{ background:url(../images/funr5.png) no-repeat left center; height:32px; line-height:32px; padding-left:40px; color:#8B6201; font-family:"华文楷体"; font-size:18px}
+		.footer .box h4,.contact .box h4{ margin-left:40px; color:#555353; margin-top:20px; margin-bottom:10px}
+		.footer .box p,.contact .box p{ margin-left:40px;width:597px;display:inline; margin-bottom:5px; text-indent:0px; color:#555353}
+			.contact .box p span{ color:#7F9F27}
+		.footer .mainAll p{margin-bottom:5px;float:left}
+    .contact .mainAll p {float:left; margin-bottom:5px;text-indent:0px}
+			.contact .mainAll .indent p{ text-indent:28px}
+      .footer .mainAll .indent p{width:657px;line-height:25px}
+		.footer .mainAll .map{ float:left; margin-left:40px;width:518px; display:inline}
+				.footer .mainAll .map h5{ margin-top:10px;font-family:"华文细黑"; color:#444;font-size:16px;width:518px;float:left}
+					.footer .mainAll .map h5 a{ color:#444}
+				.footer .mainAll .map p{ text-indent:28px; margin-bottom:10px; margin-top:5px;width:518px;float:left}
+				.footer .mainAll .map a{ margin-right:10px; text-decoration:none; color:#555353}
+				.footer .mainAll .map a:hover{ text-decoration:underline}
+		.footer .mainAll h6,.contact .mainAll h6{ margin-left:40px; line-height:30px; color:#DA8A00}
+		.contact .box form p{ margin-left:42px}
+		.contact .mainAll p.mb15{ margin-bottom:15px}
+		.contact .mainAll p label{ width:68px;font-size:14px; color:#896311; vertical-align:middle;float:left; text-align:left; display:block;}
+		.contact .mainAll p.submit input{ margin-left:70px}
+		.footer .mainAll ul{ margin-left:20px; list-style:outside}
+			.footer .mainAll ul li{ font-size:14px; margin-bottom:10px}
+.messgeList{ margin-left:60px; display:inline; float:left; width:597px; overflow:hidden; margin-bottom:50px}
+	.messgeBox{ width:597px; float:left; margin-top:20px; border-bottom:1px solid #E4EDB7; overflow:hidden}
+		.messgeBox p{ color:#6B4C0A; line-height:30px}
+		.messgeBox p.title,.messgeBox p.title a{ color:#A29A85; text-decoration:none}
+		.messgeList p.page{ text-align:center; padding:20px 0px;}
+		.messgeBox .reply p{ color:#727F6F; font-size:14px}
+		.page a{color:#574618; text-decoration:none}
+		.messgeBox p.title a:hover,.page a:hover{ text-decoration:underline}
+/*------------农家乐资讯---------------*/
+.new_wrap{}
+	.new_wrap .sidenav{ background:url(../images/top/sub05_3.jpg) no-repeat left top; height:25px}
+	.new_wrap .sideBox{ background:url(../images/top/sub05_10.jpg) no-repeat left top}
+	.new_wrap .minNav{ background:url(../images/top/sub05_11.jpg) no-repeat left top ; width:657px; height:51px}
+		.new_wrap .sideBox .newTop{ margin:30px 35px}
+			.new_wrap .sideBox .sideAll .newTop p{ margin-bottom:0px; color:#7F9F27}
+			.new_wrap .sideBox .sideAll .newTop li{ background:none; margin-left:0px; height:25px; line-height:25px}
+				.new_wrap .sideBox .sideAll .newTop li a{ margin-left:0px}
+	.new_wrap #content{ background:url(../images/nb.jpg) repeat-y left top}
+	.new_wrap table,.new_wrap .search{ width:612px; overflow:hidden; float:left; margin-right:65px; margin-left:23px}
+		.new_wrap .search{ line-height:20px; margin-bottom:10px}
+			.new_wrap .search select{border:1px solid #A4C035}
+			.new_wrap .search .text{ border:1px solid #A4C035; float:none; padding:1px; width:150px}
+			.new_wrap .search .submit{ vertical-align:top}
+		.new_wrap .search .left{ background:url(../images/th.jpg) no-repeat left center; padding-left:20px}
+	.new_wrap table th,.new_wrap table td,.new_wrap table{ float:left}	
+	.new_wrap table{ border-bottom:1px solid #E2ECD3}	
+		.new_wrap table td{ text-align:center; border-bottom:1px solid #E2ECD3; line-height:30px; color:#666}
+		.new_wrap table td.title{ text-align:left; padding-left:20px; width:280px}
+		.new_wrap table td a{ text-decoration:none; color:#999}
+		.new_wrap table td a:hover{ text-decoration:underline}
+		.new_wrap table .click{ width:64px}
+		.new_wrap table .title{ width:300px}
+		.new_wrap table .user{ width:86px}
+		.new_wrap table .time{ width:84px}
+		.new_wrap table .reply{ width:78px}
+	.new_wrap .mainBox .mainAll .page{ text-align:center; line-height:15px; width:100%; float:left; font-size:12px; margin-bottom:0px; padding-bottom:30px; color:#666}
+		.new_wrap .page a{ margin:0px 5px; font-size:12px; color:#666}
+			.new_wrap .page a img{ vertical-align:top}
+		.new_wrap .page a.active{ font-weight:bold; color:#287715}
+/*------------温馨住宿-------------*/
+.house{}
+	.food #content,.cms #content,.house #content{ background:url(../images/top/house13.jpg) repeat-y left top}
+	.food .sidenav,.house .sidenav{ background:url(../images/top/house_3.jpg) no-repeat left top; height:23px}
+		.house .sidenav p{ margin-left:240px}
+		.food .sidenav p{ margin-left:330px}
+	.food .sideBox,.house .sideBox{ background:url(../images/top/house_10.jpg) no-repeat left top}
+		
+	.house .minNav{ background:url(../images/top/house_11.jpg) no-repeat left top; height:51px; width:657px}
+	.food .minNav{ background:url(../images/top/food_3.jpg) no-repeat left top; width:657px; height:51px}
+	.food .sideBox{ background:url(../images/top/food1.jpg) no-repeat left top}
+.food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
+/*.house .houseText{ margin-top:15px}*/
+	.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
+	.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
+		.food .mainAll h4 span,.house .mainAll h4 span{ color:#659F27}
+	.food .mainAll p,.house .mainAll p{ text-indent:0px; margin-bottom:10px; color:#4A5234}
+	.food .mainAll h4,.food .mainAll p,.food table,.house .mainAll h4,.house .mainAll p,.house table{ margin-left:30px}
+	.food table,.cmsNav,.fun table,.house table{ width:597px; overflow:hidden; display:block}
+		.food table th,.cmsNav th,.house table th,.fun table th{ height:31px; line-height:31px; float:left; overflow:hidden}
+			.food th a,.cmsNav th a,.fun table th a,.house table th a{font-weight:normal; color:#729827; text-decoration:none}
+			.food th a.active,.cmsNav th a.active,.house table th a.active,.fun table th a.active{ color:#EF8100}
+			.food th a:hover,.cmsNav th a:hover,.fun table th a:hover,.house table th a:hover{ text-decoration:underline; color:#EF8100}
+		.food table .click,.cmsNav .click,.house table .click,.fun table .click{ background:url(../images/thh_6.jpg) no-repeat left top; width:131px}
+		.cmsNav .title,.food table .title,.house table .title,.fun table .title{ background:url(../images/thh_7.jpg) no-repeat left top; width:110px}
+		.cmsNav .user,.house table .user,.food table .user,.fun table .user{ background:url(../images/thh_8.jpg) no-repeat left top; width:113px}
+		.cmsNav .time,.house table .time,.fun table .time,.food table .time{  background:url(../images/thh_9.jpg) no-repeat left top; width:108px; text-align:center}
+		.cmsNav .reply,.house table .reply,.fun table .reply,.food table .reply{  background:url(../images/thh_10.jpg) no-repeat left top; width:135px}
+	.albums{ background:url(../images/88_3.jpg) no-repeat left top; width:700px;margin-bottom:20px; height:370px}
+		.albums .left{ width:388px; height:266px; margin-left:40px; margin-top:26px}
+			.albums .left .title{text-align:right; font-family:'华文楷体'; font-size:20px; color:#3D3D3D; background:none; width:360px; line-height:30px}
+			.albums .right{ float:left; width:198px; margin-left:20px; margin-top:10px} 
+				.albums .right a{ width:63px; height:59px; overflow:hidden; background:url(../images/14_3.png) no-repeat left top; display:block; float:left}
+					.albums .right a img{ margin-left:10px; margin-top:7px}
+	.foodText ,.houseText{ float:left; width:100%;margin-bottom:15px}
+	.food h5,.house h5{ color:#6A4C05; vertical-align:middle;font-family:'华文楷体'; font-size:20px; margin-left:25px;margin-bottom:10px}
+		.food h5 img,.house h5 img{ vertical-align:middle;margin-right:3px}
+		.houseText p{ color:#504A4A}
+   .houseText div{margin-left:30px;display:inline;float:left;width:627px}
+.houseTable{width:630px; padding:1px}
+		.houseTable td{ border:1px solid #ccc; text-align:center; color:#FF0000; font-weight:bold; padding:2px}
+		.houseTable thead td{ color:#444;font-weight:normal}
+		.houseTable td.left{ color:#444;width:90px; font-weight:normal; font-family:"华文楷体"; font-size:14px; border-left:1px solid #ccc; float:none; text-align:left; border-left:1px solid #ccc} 
+		.houseTable .normalTr td,.houseTable td.normal{ color:#444; font-weight:normal}
+
+/*--------------关于山水农家乐------------*/
+	.info .sidenav p{ margin-left:135px}
+.info .sideBox{ background:url(../images/top/lefth1.jpg) no-repeat left top}
+.info .minNav{ background:url(../images/top/ifonT1.jpg) no-repeat left top; width:657px; height:50px}
+.infoBack{ background:url(../images/back_7.jpg) no-repeat left bottom; padding-bottom:120px}
+	.infoBack h2{ margin-left:30px; margin-top:20px}
+	#content .infoBack p{ margin-bottom:0px; line-height:25px; width:627px; text-indent:0px; margin-left:30px; color:#4A5234}
+		#content .infoBack p a{ color:#F90606; text-decoration:none; font-family:"华文楷体"; font-size:14px}
+.newBox .sideBox{ background:url(../images/top/new_2.jpg) no-repeat left top}
+.newBox .mainAll{ background:none; float:left; margin-bottom:30px}
+	.newBox .mainAll h4{ text-align:center; color:#6370C1; font-size:15px; margin:20px 0px 30px}
+	.newBox .mainAll p{ margin-left:0px; text-indent:28px; margin-bottom:20px}
+.newBox .minNav{ background:url(../images/top/new_3.jpg) no-repeat left top; width:657px; height:54px}
+	.newBox .minNav p{ margin-top:34px}
+	.newBox .mainAll .backNew,.newBox .mainAll .noneIndent{ text-indent:0px}
+	body #content a.quote,body #content .quote{ color:#527BA9}
+	body #content .backNew a{color:#797272}
+	.cmsTable td a,.newList li .title a,body #content a.quote,body #content .backNew a{ text-decoration:none}
+	.cmsTable td a:hover,.newList li .title a:hover,body #content a.quote:hover,body #content .backNew a:hover{ text-decoration:underline}
+.newList{ float:left; width:657px; margin:20px 0px}
+	.newList li{ float:left; width:100%; border-bottom:1px solid #E4EDB7; height:30px; padding:1px 0px}
+		.newList li div{ line-height:30px}
+		.newList li.topTitle{ background-color:#D6EABE; border-bottom:none; font-size:14px}
+		.newList li .title{ width:505px; margin-left:27px; background:url(../images/top/newt.gif) no-repeat left center; padding-left:25px; float:left; display:inline}
+			.cmsTable td a,.newList li .title a{ color:#514F4F}
+		.newList li .time{ float:right; width:100px;text-align:center; display:inline}
+		.newList li.topTitle .title{ background-image:none}
+		.newList li.odd { background-color:#F9FCF5}
+		
+/*------------后台管理页面--------------*/
+.cms .sideBox{ background:url(../images/top/cms.gif) no-repeat left top}
+.cmsTable{ width:656px; float:left; margin-top:20px;border-collapse:separate} 
+	.cmsTable th{ background-color:#D6EABE; height:30px; line-height:30px;border-bottom:1px solid #E4EDB7; border-right:1px solid #E4EDB7;}
+		.cmsTable td{ border-bottom:1px solid #E4EDB7; border-right:1px solid #E4EDB7;line-height:25px; text-align:center; padding:3px; }
+		.cmsTable .odd td{ background-color:#F9FCF5}
+		.cmsTable td.left{ float:none; text-align:left; border-left:1px solid #E4EDB7}
+		.cmsTable td.bl{ border-left:1px solid #E4EDB7}
+.cms .minNav{ border-bottom:1px solid #E4EDB7; line-height:50px;overflow:hidden; height:50px; width:657px; float:left}
+	.cms .minNav h2{ color:#7F9F27; margin:0px; width:400px; float:left}
+		.cms .minNav .right{ float:right; margin-top:15px;display:inline;width:100px; text-align:right}
+		.cms .minNav h2 span{ color:#9A5700}
+.cmsForm{ float:left; width:100%; margin-top:20px}
+	.mainAll .cmsForm p{ width:657px;display:inline; float:left; margin-bottom:10px; text-indent:0px}
+		.cmsForm p label{ width:80px; float:left}
+		.cmsForm .text{ width:300px}
+		.cmsForm textarea{ width:647px; height:300px}
+	.cms .page,.info .page{ text-align:center; color:#514F4F}	
+		.cms .page a,.info .page a{ margin:0px 3px; color:#514F4F}
+	.cms .mainAll{ float:left}
+	.cmsNav{ float:left; margin-bottom:0px; margin-top:10px}
+.cms .box{ margin:0px}
+	.cms .submit input{ margin-left:80px}
+.formBox{ padding:20px; margin-left:330px; float:left;width:350px;display:inline}
+	.formBox .text{ width:200px}
+	.formBox .cmsForm label{ width:60px}
+	.formBox h4{ text-align:center; margin-bottom:10px}
+.cmsBox{ border-bottom:2px solid #7F9F27; float:left; width:100%; margin-bottom:10px}
+	.cmsBox h5{color:#DA8A00;font-family:"华文楷体";width:657px;font-size:18px;margin:20px 0}
+  .cmsBox .cmsImg{float:left; margin:10px 0px 10px 80px}
+  .cmsBox .imgBox{margin-right:5px;text-align:center;float:left}
+    .cmsBox img{padding:2px; border:1px solid #ccc}
+  .cmsForm h6{widht:657px;}
+/*-----------footer-------------*/
+#footer { background:url(../images/fb.gif) repeat-x left top; width:100%; float:left; color:#fff}
+	#footer .left{ float:left; margin-left:48px}
+	#footer .rightBox{ float:left; margin-left:50px; margin-top:10px}
+	#footer a{ color:#fff; margin:0px 5px; text-decoration:none}
+/*--------back----------*/
+.index .logo{width:214px; height:91px;background:url(../images/top/index_logo.jpg) no-repeat left top}
+.index .mainNav{ height:91px; width:766px}
+	.index .mainNav .top{background:url(../images/top/index_top.jpg) no-repeat left top; height:24px}
+	.index .mainNav .nav{background:url(../images/top/index_nav.jpg) no-repeat left top; height:49px}
+	.index .mainNav .sidenav{background:url(../images/top/index_sidenav.jpg) no-repeat left top; height:18px}
+.index #content{ background:url(../images/top/index_content.jpg) no-repeat left top}

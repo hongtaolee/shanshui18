@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  file_path: MyString
+  category: MyString
+  hits: 1
+
+two:
+  name: MyString
+  file_path: MyString
+  category: MyString
+  hits: 1

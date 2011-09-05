@@ -1,0 +1,29 @@
+﻿<% params[:id] ||= 1 %><div id="indexImg">
+        	<img src="/images/njcy1.jpg" width="350" height="220" />
+			<img src="/images/njcy2.jpg" width="350" height="220" />		</div>
+        <div id="nav">
+        	<p class="main">
+                <a href="/gk.html">走进山水</a>
+                <a class="active" href="/picture">美食及住宿</a>
+                <a href="/snyl.html">娱乐及风景</a>
+		<a href="/xclx.html">服务指南</a>            
+		<a href="/lxwm.html">联系我们</a>	
+		</p>
+	<div class="side boxNav">
+        <p>
+          <a href="/index.html">首页</a> &gt; 
+          <a href="/picture">美食及住宿</a> &gt; 
+          <%=h picture_nav[params[:id].to_s].first %> 
+        </p>
+        <h3><%=h picture_nav[params[:id].to_s][1] %></h3>
+			</div>	
+		</div>
+		<div class="bigBox">
+      <% @pictures.each do |p| 
+         pid = p.id %>
+			<div class="all">
+        <img src="<%= p.file_url %>" />
+        <br /><b><%=h p.name %></b><br /><%= p.created_at.strftime("%Y %m %d") %>			</div>
+      <% end unless @pictures.blank? %>
+      <%=render :partial=>'admin/page' %>
+    </div>

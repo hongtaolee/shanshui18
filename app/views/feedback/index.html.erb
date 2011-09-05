@@ -1,0 +1,50 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<p>在线留言 &lt; <a href="/lxwm">联系我们</a> &lt; <a href="/">西安山水农家乐</a></p>
+			</div>
+			<div class="mainAll">
+				<div class="box">
+					<h5>给我们留言</h5>
+          <% form_remote_for :feedback, :url => {:controller => "feedback", :action => "create"} , :html => {:class => "cmsForm" } do |f| %>
+						<p id="textarea">
+							<label>内容：</label>
+              <%=f.text_area :content, :class => "textarea" %>
+						</p>
+						<p>
+							<label>姓名：</label>
+              <%=f.text_field :username , :class => "text" %>
+						</p>
+						<p>
+							<label>电话：</label>
+              <%=f.text_field :phone, :class => "text" %><span class="left">（可不填，仅管理员可见）</span>
+						</p>
+						<p>
+							<label>Email：</label>
+              <%=f.text_field :email, :class => "text" %><span class="left">（可不填，仅管理员可见）</span>
+						</p>
+						<p class="submit"><input type="image" src="/images/tj.jpg" /></p>
+          <% end %>
+				</div>
+				<div class="messgeList">
+        <% if @feedbacks.blank? %>
+        <% else %>
+        <% @feedbacks.each do |f| %>
+          <div class="messgeBox" id="feedback_item_<%=f.id %>">
+            <%= render :partial => 'feedback/item', :locals => {:f => f} %>
+					</div>
+        <% end %>
+        <% end %>
+        <p class="page">
+          共有<%=@feedbacks_count %>条记录 
+          <% page = params[:page].to_i %>
+          <% if page > 1 %>
+          <a href="/feedback?page=<%=page - 1 %>">上一页</a> 
+          <% end %>
+          <%=page %>/<%=@total_page %>
+          <% if @total_page > page %>
+            <a href="/feedback?page=<%=page + 1 %>">下一页</a>
+          <% end %>
+          </p>
+				</div>
+			</div>
+		</div>

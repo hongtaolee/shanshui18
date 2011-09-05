@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------  
+   forms.css
+-------------------------------------------------------------- */
+
+label       { font-weight: bold }
+fieldset    { padding:15px; margin: 0 0 15px 0; border: 1px solid #ccc }
+legend      { font-weight: bold; font-size:12px }
+
+
+/* Form fields
+-------------------------------------------------------------- */
+
+input.text, input.title,textarea {margin:0;border:1px solid #DBE9B0; background-color:#F8FBEF}
+
+/*input.text:focus, input.title:focus,textarea:focus, select:focus {border:1px solid #666}*/
+
+input.text { width: 200px; padding:4px; float:left }
+.contact textarea,textarea { width: 517px; height: 100px; padding:4px; font-size:12px; float:left}
+.replyForm textarea { width:583px; height:50px}
+.replyForm{float:left;margin:10px 0px}
+.info .replyForm textarea{ width:570px; height:100px}
+#content .replyForm p{ width:100%; text-indent:0px; margin:0px; padding:0px; float:left; margin-bottom:5px}
+	.info .replyForm textarea,#content .replyForm p label,#content .replyForm p .text{ float:left}
+	#content .replyForm p.submit input{ margin-left:75px}
+
+/*------------------------提示信息-------------------------------------- */
+.modal1 .error,.modal1 .notice, .modal1 .success {padding:0px;padding-left:65px; height:50px; line-height:50px; border:none; margin:0px }
+/*---------------------------------*/
+.error,.notice, .success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd}
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
+ul.notice-li{list-style-type:disc;margin:0 35px 5px}
+	#main-content ul.notice-li h5{ font-weight:bold; line-height:30px; margin-left:-30px}
+

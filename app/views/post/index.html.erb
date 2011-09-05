@@ -1,0 +1,40 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<p>农家乐资讯 &gt; <a href="/">西安山水农家乐</a></p>
+			</div>
+			<div class="">
+				<img src="/images/top/sub05_13.jpg" />
+			</div>
+			<div class="mainAll">
+				<div class="search">
+					<div class="left">全面了解农家乐资讯，让您出行更放心。</div>
+					<div class="right">
+            <form action="/post/search">
+              <%=select_tag :category, options_for_select(Const::POST_SEARCH_CATEGORY) %>
+						  <input type="text" class="text" name="keyword" />
+              <input type="image" class="submit" src="/images/th_3.jpg" />
+            </form>
+					</div>
+				</div>
+				<table>
+					<tr>
+						<th class="click"><img src="/images/th_7.jpg" /></th>
+						<th class="title"><img src="/images/th_8.jpg" /></th>
+						<th class="user"><img src="/images/th_9.jpg" /></th>
+						<th class="time"><img src="/images/th_10.jpg" /></th>
+						<th class="reply "><img src="/images/th_11.jpg" /></th>
+					</tr>
+          <% @posts.each do |p| %>
+					<tr>
+            <td class="click"><%=p.hits %></td>
+            <td class="title"><a href="/post/show/<%=p.id %>"><%=h p.title %></a></td>	
+            <td class="user"><%=h p.author %></td>
+            <td class="time"><%=p.publish_date.strftime("%Y/%m/%d") %></td>
+            <td class="reply"><%=p.comments_count %></td>
+					</tr>
+          <% end %>
+				</table>
+        
+        <%=render :partial => "share/page" %>
+			</div>
+		</div>

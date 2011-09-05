@@ -1,0 +1,213 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<p>温馨住宿 &lt; <a href="/">西安山水农家乐</a></p>
+			</div>
+			<div class="mainAll">
+				<h4>客房分类<span>一览</span></h4>
+				<p>为满足不同客户的需求，我们的客房做了详细的分类，以满足不同客户的需求。点击房间分类名称，您将看到不同类型房间的照片。</p>
+				<table>
+					<tr>
+            <th class="click"><a class="<%='active' if params[:id].to_i == 1 %>" href="/house/1">标准间</a></th>
+						<th class="title"><a class="<%='active' if params[:id].to_i == 2 %>" href="/house/2">双人间</a></th>
+						<th class="user"><a class="<%='active' if params[:id].to_i == 3 %>" href="/house/3">三人间</a></th>
+						<th class="time"><a class="<%='active' if params[:id].to_i == 4 %>" href="/house/4">火炕间</a></th>
+						<th class="reply"><a class="<%='active' if params[:id].to_i == 5 %>" href="/house/5">多人间</a></th>
+					</tr>
+				</table>
+				<div id="h1" class="albums">
+					<ul id="slideshow">
+            <% @pictures.each do |p| %>
+						<li>
+              <h3><%=h p.name %></h3>
+              <span><%=p.file_url %></span>
+							<p></p>
+              <a href="javascript:void(0);"><img src="<%=p.file_url %>" alt="<%=h p.name %>" /></a>					
+						</li>
+            <% end %>            
+					</ul>
+					<div id="wrapper">
+						<div id="fullsize" style=" float:left;">
+							<div id="imgprev" class="imgnav" title="Previous Image" style="display:none;"></div>
+							<div id="imglink"></div>
+							<div id="imgnext" class="imgnav" title="Next Image"  style="display:none;"></div>
+							<div id="image"></div>
+							<div id="information">
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+						<div id="thumbnails" style=" float:left;">
+							<div id="slideleft" title="Slide Left"  style="display:none;"></div>
+							<div id="slidearea">
+								<div id="slider"></div>
+							</div>
+							<div id="slideright" title="Slide Right" style="display:none;"></div>
+						</div>
+					</div>
+				</div>
+        <div id="h2" class="houseText">
+					<h5><img src="/images/funr5.png"/>房间和价格</h5>
+          <table class="houseTable">
+						<thead>
+						<tr>
+							<td>设施/房间</td>
+              <td colspan="2">标准间<br/>（9间）</td>
+              <td colspan="2">双人间<br/>（2间）</td>
+              <td colspan="2">三人间<br/>（1间）</td>
+              <td colspan="2">多人间<br/>（4间）</td>
+              <td colspan="2">火炕间<br/>（1间）</td>
+              <td>会议室<br/>（1间）</td>
+						</tr>
+						</thead>
+						<tr>
+							<td class="left">卫星电视</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td class="left">空调</td>
+							<td class="normal" colspan="2">x</td>
+							<td class="normal" colspan="2">x</td>
+							<td class="normal" colspan="2">x</td>
+							<td class="normal" colspan="2">x</td>
+							<td class="normal" colspan="2">x</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td class="left">太阳能热水器</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td class="normal">x</td>
+						</tr>
+						<tr>
+							<td class="left">独立卫生间</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td class="normal">x</td>
+						</tr>
+						<tr>
+							<td class="left">暖气</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td class="left">床</td>
+							<td class="normal" colspan="2">单人床</td>
+							<td class="normal" colspan="2">双人床</td>
+							<td class="normal" colspan="2">单人床</td>
+							<td class="normal" colspan="2">单人床</td>
+							<td class="normal" colspan="2">标准火炕</td>
+							<td class="normal">x</td>
+						</tr>
+						<tr>
+							<td class="left">白色系床品</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2" class="normal">x</td>
+							<td class="normal">x</td>
+						</tr>
+						<tr>
+							<td class="left">简单装饰画</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td class="left">暖色系窗帘</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td colspan="2">√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td class="left">最多容纳人数</td>
+							<td class="normal" colspan="2">2人</td>
+							<td class="normal" colspan="2">2人</td>
+							<td class="normal" colspan="2">3人</td>
+							<td class="normal" colspan="2">4-5人</td>
+							<td class="normal" colspan="2">2-3人</td>
+							<td class="normal">30人</td>
+						</tr>
+						<tr class="normalTr">
+							<td>时间</td>
+							<td>周四至周日</td>
+							<td>周一至周三</td>
+							<td>周四至周日</td>
+							<td>周一至周三</td>
+							<td>周四至周日</td>
+							<td>周一至周三</td>
+							<td>周四至周日</td>
+							<td>周一至周三</td>
+							<td>周四至周日</td>
+							<td>周一至周三</td>
+							<td>周一至周日</td>
+						</tr>
+						<tr class="normalTr">
+							<td>价格</td>
+							<td>60元/间</td>
+							<td>50元/间</td>
+							<td>60元/间</td>
+							<td>50元/间</td>
+							<td>80元/间</td>
+							<td>60元/间</td>
+							<td>20元/人</td>
+							<td>15元/人</td>
+							<td>60元/间</td>
+							<td>50元/间</td>
+							<td>免费</td>
+						</tr>
+          </table> 
+          <p style="margin-left:30px;">*节假日期间都按周末价格标准计算。</p>
+        </div>
+				<div id="h4" class="houseText">
+					<h5><img src="/images/funr5.png"/>特价房间</h5>
+          <% if @content && !@content.content_b.blank? %>
+          <%=@content.content_b %>
+          <% else %>
+          <p>很抱歉，暂无，请随时关注我们的更新。</p>
+          <% end %>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript" src="/javascripts/slide.js" ></script>
+<script type="text/javascript">
+	$('slideshow').style.display='none';
+	$('wrapper').style.display='block';
+	var slideshow=new TINY.slideshow("slideshow");
+	window.onload=function(){
+		slideshow.auto=true;
+		slideshow.speed=5;
+		slideshow.link="linkhover";
+		slideshow.info="information";
+		slideshow.thumbs="slider";
+		slideshow.left="slideleft";
+		slideshow.right="slideright";
+		slideshow.scrollSpeed=4;
+		slideshow.spacing=1;
+		slideshow.active="#fff";
+		slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+	}
+</script>
+</body>
+</html>

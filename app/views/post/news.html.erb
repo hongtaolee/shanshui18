@@ -1,0 +1,20 @@
+		<div class="mainBox">
+			<div class="minNav">
+        <p>最新动态 &lt; <a href="/info">简介</a> &lt; <a href="/">西安山水农家乐</a></p>
+			</div>
+			<div class="mainAll">
+				<ul class="newList">
+					<li class="topTitle">
+						<div class="title">Article Title</div>
+						<div class="time">Date</div>
+					</li>
+          <% @posts.each_with_index do |p,i| %>
+          <li class="<%='odd' if i.odd? %>">
+            <div class="title"><a href="/post/show/<%=p.id%>"><%=h p.title %></a></div>
+            <div class="time"><%=p.publish_date.strftime('%Y-%m-%d')%></div>
+					</li>
+          <% end %>
+				</ul>
+        <%=render :partial => "share/page" %>
+			</div>
+		</div>

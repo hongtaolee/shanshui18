@@ -1,0 +1,126 @@
+		<div class="indexLeft">
+			<div class="leftTop">
+				<h1><img src="/images/top/title_2.jpg" /></h1>
+				<div class="main">
+					<ul>
+            <% @posts.each do |p| %>
+              <li><span>[<%=p.publish_date.strftime('%Y.%m.%d')%>]</span><a href="/post/show/<%=p.id%>" class="<%='new' if p.is_new %>"><%=h truncate(p.title,13) %></a></li>
+            <% end unless @posts.blank? %>
+					</ul>
+				</div>
+			</div>
+      <% if !@buy.blank? %>
+			<div class="box leftCenter">
+				<h1><img src="/images/top/title_5.jpg" /></h1>
+				<div class="main">
+          <%=@buy.content %>
+				</div>
+			</div>
+			<div class="box leftBottom">
+        <%=image_tag(@buy.file_url('pic1'), :size => "82x82") %>
+        <%=image_tag(@buy.file_url('pic2'), :size => "82x82") %>
+        <%=image_tag(@buy.file_url('pic3'), :size => "82x82") %>
+			</div>
+      <% end %>
+		</div>
+		<div class="indexCenter">
+			<div class="centerTop">
+				<h1><img src="/images/top/title_3.jpg" /></h1>
+				<div class="main">
+        <% if !@house.blank? %>
+					<div class="left">
+						<div class="leftImg">
+              <%=image_tag(@house.file_url('pic1'), :size => "146x90") %>
+						</div>
+						<div class="rightImg">
+              <%=image_tag(@house.file_url('pic2'), :size => "75x43") %>
+              <%=image_tag(@house.file_url('pic3'), :size => "75x43") %>
+						</div>
+					</div>
+					<div class="rightBox">
+            <h5><%=h @house.title %></h5>
+            <h6><%=h @house.s1 %></h6>
+            <h6><%=h @house.s2 %></h6>
+            <a href="/house/1"><img src="/images/gd.gif" /></a>
+					</div>
+        <% end %>
+				</div>
+			</div>
+			<div class="centerCenter">
+				<h1><img src="/images/top/title_6.jpg" /></h1>
+				<div class="main">
+        <% if !@food.blank? %>
+					<div class="left">
+						<div class="leftImg">
+              <%=image_tag(@food.file_url('pic1'), :size => "146x90") %>
+						</div>
+						<div class="rightImg">
+              <%=image_tag(@food.file_url('pic2'), :size => "75x43") %>
+              <%=image_tag(@food.file_url('pic3'), :size => "75x43", :class => "bottom") %>
+						</div>
+					</div>
+					<div class="rightBox">
+            <h5><%=h @food.title %></h5>
+            <h6><%=h @food.s1 %></h6>
+            <h6><%=h @food.s2 %></h6>
+            <a href="/food/11"><img src="/images/gd.gif" /></a>
+					</div>
+        <% end %>
+				</div>
+			</div>
+			<div class="centerBottom">
+				<h1><img src="/images/top/title_8.jpg" /></h1>
+				<div class="main">
+					<div class="left"><img src="/images/top/map.gif" /></div>
+					<div class="rightBox">从西安绕城高速曲江口进包茂高速（西柞段）行至太乙宫口下，再向南沿公路行驶10分钟即到；或从...
+						<p><a href="/lxwm">点击更多</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="indexRight">
+			<div class="rightTop">
+				<h1><img src="/images/top/title_4.jpg" /></h1>
+				<div class="main">
+        <% if !@scene.blank? %>
+					<div class="left">
+            <%=image_tag(@scene.file_url('pic1'), :size => "73x99") %>
+					</div>
+					<div class="rightBox">
+            <p><%=h @scene.s1 %></p>
+            <p><%=h @scene.s2 %></p>
+            <p class="mb15"><%=h @scene.s3 %></p>
+						<p><a href="/fun"><img src="/images/gd.gif" /></a></p>
+					</div>
+        <% end %>
+				</div>
+			</div>
+			<div class="rightCenter" style=" margin-bottom:20px;">
+				<h1><img src="/images/top/title_7.jpg" /></h1>
+        <div class="main">
+        <% if !@fun.blank? %>
+					<div class="left">
+            <%=image_tag(@fun.file_url('pic1'), :size => "73x99") %>
+					</div>
+					<div class="rightBox">
+            <p><%=h @fun.s1 %></p>
+            <p><%=h @fun.s2 %></p>
+            <p class="mb15"><%=h @fun.s3 %></p>
+						<p><a href="/fun/fun2"><img src="/images/gd.gif" /></a></p>
+					</div>
+        <% end %>
+				</div>
+			</div>
+			<div class="rightBottom">
+				<h1><img src="/images/top/title_9.jpg" /></h1>
+				<div class="main">
+					<div class="left"><img src="/images/tmp/can.jpg" /></div>
+					<div class="rightBox">
+						<a href="/lxwm">依维柯</a>
+						<a href="/lxwm">考斯特</a>
+						<a href="/lxwm">大金龙</a>
+					</div>
+				</div>
+			</div>
+		</div>
+

@@ -1,0 +1,36 @@
+			<div id="indexImg">
+				<img src="/images/zxdt1.jpg" width="350" height="198" />
+				<img src="/images/zxdt2.jpg" width="350" height="198" />		
+			</div>
+			<div class="formBox">
+				<table class="mjLike" cellpadding="0" cellspacing="0" border="1">
+					<tr>
+						<th>内容</th>
+            <th>作者</th>
+            <th>Email</th>
+						<th>电话</th>
+            <th class="del">删除</th>
+					</tr>
+          <% @feedbacks.each do |p| 
+             pid = p.id %>
+					<tr>
+            <td><%=p.html_content %></td>
+            <td><%=h p.username %></a></td>
+            <td><%=h p.email %></a></td>
+            <td><%=h p.phone %></a></td>
+            <td class="del">
+              <%=link_to_remote('删除',
+                      :url=>{:controller=>'admin',:action=>'feedback_delete',:id=>p.id},
+                      :before=>"if (!confirm('确定要删除该留言吗？')) { return false; };")%>
+            </td>
+					</tr>
+        <% end unless @feedbacks.blank? %>
+				</table>
+				<div class="page">
+          <!--TODO: 分页 
+				  <a href="#"><img src="/images/leftye.jpg" width="18" height="12" /></a>
+				  <a href="#">1</a>.
+          <a href="#"><img src="/images/rightye.jpg" width="18" height="12" /></a>
+          --> 
+        </div>
+			</div>

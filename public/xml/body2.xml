@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+
+/*---————————图片尺寸设置——————————---*/
+
+<w>200</w> /*--缩略图宽度--*/
+<h>180</h>  /*--缩略图高度--*/
+
+<lw>360</lw>/*--大图宽度--*/
+<lh>270</lh> /*--大图高度--*/
+
+
+
+
+
+
+/*--——————————-图片内容和地址-——————————--*/
+<Item>
+            <P>images/00.jpg</P>
+</Item>
+
+
+
+<Item>
+            <P>images/11.jpg</P>
+</Item>
+
+<Item>
+            <P>images/22.jpg</P>
+</Item>
+
+<Item>
+            <P>images/33.jpg</P>
+</Item>
+
+<Item>
+            <P>images/44.jpg</P>
+</Item>
+
+<Item>
+            <P>images/55.jpg</P>
+</Item>
+
+<Item>
+            <P>images/66.jpg</P>
+</Item>
+
+<Item>
+            <P>images/77.jpg</P>
+</Item>
+
+<Item>
+            <P>images/88.jpg</P>
+</Item>
+
+<Item>
+            <P>images/99.jpg</P>
+</Item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</root>

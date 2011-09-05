@@ -1,0 +1,12 @@
+				<ul class="mb15">
+        <% Const::NJL_INFO.each do |ni| %>
+          <li><a class="<%='active' if ni == @category %>" href="/post/index/<%=ni%>"><%=h Const::POST_CATEGORY_HASH[ni] %></a></li>
+        <% end %>
+				</ul>
+				<img src="/images/il2.gif" />
+				<ul class="newTop">
+					<p>农家乐资讯点击排行</p>
+          <% @posts_rank.each_with_index do |p, i| %>
+          <li><%=i+1%>、<a href="/post/show/<%=p.id %>" title="<%=h p.title %>"><%=h truncate(p.title,14) %></a></li>
+          <% end %>
+				</ul>

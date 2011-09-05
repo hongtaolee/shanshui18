@@ -1,0 +1,27 @@
+						<p class="title">
+              <%=h f.username %>
+              <% if manager? %>
+              <%= " | #{h f.phone}" if !f.phone.blank? %>
+              <%= " | #{h f.email}" if !f.email.blank? %>
+              <% end %>
+              <span class="ml5"><%=datetime_format(f.created_at) %></span> 
+              <% if manager? %>
+                <a class="ml5" href="javascript:void(0);" onClick="$('feedback_reply_<%=f.id%>').show();$('reply_<%=f.id %>').hide();" >回复</a> | 
+              <%=link_to_remote "删除", :url => {:controller => "feedback", :action => "remove", :id => f.id}, :confirm => "确定要删除该留言？" %>
+              <% end %>
+						</p>
+            <%=f.html_content %>
+            <% if manager? %>
+            <div class="replyForm" style="display:none;" id="feedback_reply_<%=f.id%>">
+              <%=form_remote_tag :url => {:controller => "feedback", :action => "reply", :id => f.id} %>
+              <%=text_area_tag :reply, h(f.reply) %>
+              <input type="submit" value="回复" /> 
+              </form>
+              <a href="javascript:void(0);" onClick="$('feedback_reply_<%=f.id%>').hide();$('reply_<%=f.id%>').show();">关闭</a>
+						</div>       
+            <% end %>
+            <div class="reply" id="reply_<%=f.id %>">
+            <% if !f.reply.blank? %>
+           回复：<%=f.html_reply %>
+            <% end %>
+            </div>

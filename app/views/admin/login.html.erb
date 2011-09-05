@@ -1,0 +1,9 @@
+﻿			<div class="formBox">
+        <% form_tag  '/admin/login', :method=>:post, :class=>"cmsForm"  do %>
+					<h4>管理员登陆 </h4>
+          <% unless flash[:error].blank? %>
+          <div style="color:red;"><%=h flash[:error] %></div>
+          <% end %>
+					<p><label>密码：</label><input class="text" type="password" name="password"/> <input class="submit" type="submit" value="登陆" name="commit"/></p>
+        <% end %>
+			</div>

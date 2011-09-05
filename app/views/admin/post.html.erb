@@ -1,0 +1,58 @@
+      <div class="mainBox">
+			  <div class="minNav">
+          
+          <% if params[:category].to_i == Const::FUN_POST_CATEGORY.to_i %>
+			    <h2>风景<span>娱乐</span></h2>
+          <% elsif params[:category].to_i == Const::NEWS_POST_CATEGORY.to_i %>
+			    <h2>最新<span>动态</span></h2>
+          <% elsif params[:category].to_i == Const::BUY_POST_CATEGORY.to_i %>
+			    <h2>农产品<span>代购</span></h2>
+          <% else %>
+			    <h2>农家乐<span>资讯</span></h2>
+          <% end %>
+          
+          <div class="right">
+            <% if [Const::FUN_POST_CATEGORY, Const::NEWS_POST_CATEGORY].include?(params[:category].to_i) %>
+            <a href="/admin/post_edit?category=<%=params[:category] %>">编辑新文件</a>
+            <% else %>
+            <a href="/admin/post_edit">编辑新文件</a>
+            <% end %>
+          </div>
+			  </div>
+			  <div class="mainAll">
+				  <table class="cmsTable">
+					  <tr>
+						  <th>分类</th>
+						  <th>标题</th>
+						  <th>发布时间</th>
+              <th>作者</th>
+						  <th>点击</th>
+						  <th>编辑</th>
+						  <th>删除</th>
+					  </tr>
+            <% @posts.each do |p| 
+              pid = p.id %>
+					  <tr>
+              <td class="bl"><%=h Const::POST_CATEGORY_HASH[p.category.to_i] %></td>
+              <td class="alignLeft">
+                <%="[置顶]" if p.is_top%>
+                <%="[New]" if p.is_new%>
+                <a href="/post/show/<%=pid%>" ><%=h p.title %></a>
+              </td>
+              <td><%=p.publish_date %></td>
+              <td><%=h p.author %></td>
+              <td><%= p.hits %></td>
+              <td><a href="/admin/post_edit/<%=p.id%>">编辑</a></td>
+              <td>
+                <% unless p.category.to_i == Const::FUN_POST_CATEGORY %>
+                <%=link_to_remote('删除',
+                      :url=>{:controller=>'admin',:action=>'post_delete',:id=>p.id},
+                      :before=>"if (!confirm('确定要删除该动态信息吗？')) { return false; };")%>
+                <% end %>&nbsp;
+              </td>
+					  </tr>
+          <% end unless @posts.blank? %>
+				  </table>
+          <%= render :partial => 'admin/page' %>
+			  </div>
+      </div>

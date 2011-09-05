@@ -1,0 +1,23 @@
+<% if @total_page > 1 %>
+<div class="page">
+  <% if params[:page].to_i > 3 %>
+  <%=link_to image_tag("th_15.jpg"), :overwrite_params => {:page => 1} %>
+  <% end %>
+  <% n = 1 
+     fi = (params[:page].to_i) - 2 
+     fi.upto((params[:page].to_i) -1 ) do |pi|
+     if pi > 0
+     n+=1 
+  %>
+    <%=link_to pi, :overwrite_params => {:page => pi} %>
+  <% end
+  end %>
+  <%=link_to params[:page], :overwrite_params => {:page => params[:page]}, :html => {:class => 'active'} %>
+  <% (params[:page].to_i + 1).upto(params[:page].to_i + (4-n+1)) do |li|
+     if li <= @total_page %>
+     <%=link_to li, :overwrite_params => {:page => li} %>
+  <% end 
+  end %>
+  <%=link_to image_tag("th_17.jpg"), :overwrite_params => {:page => @total_page} %>
+</div>
+<% end %> 

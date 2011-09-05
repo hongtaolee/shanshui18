@@ -1,0 +1,32 @@
+    <div class="mainBox">
+			<div class="minNav">
+		    <h2>图片<span>编辑</span></h2>
+		    <div class="right"><a href="/admin/image_edit">编辑新文件</a></div>
+		  </div>
+			<div class="mainAll">
+				<table class="cmsTable">
+					<tr>
+						<th>名字</th>
+						<th class="type">分类</th>
+						<th>图片</th>
+            <!-- 
+						<th class="edit">编辑</th>
+            -->
+            <th class="del">删除</th>
+					</tr>
+          <% @pictures.each do |p| %>
+					<tr>
+            <td class="bl"><%=h p.name %></td>
+            <td><%=h Const::PICTURE_CATEGORY[p.category.to_i] %></td>
+            <td><%=image_tag p.file_url %></td>
+            <!-- <td class="edit"><a href="/admin/image_edit/<%=p.id%>">编辑</a></td> -->
+            <td class="del">
+              <%=link_to_remote('删除',
+                      :url=>{:controller=>'admin',:action=>'image_delete',:id=>p.id},
+                      :before=>"if (!confirm('确定要删除该图片吗？')) { return false; };")%>
+            </td>
+          </tr>
+          <% end unless @pictures.blank? %>
+				</table>
+        <%=render :partial=>'admin/page' %>
+		</div>

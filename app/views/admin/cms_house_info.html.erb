@@ -1,0 +1,30 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<div class="minNav"><h2>温馨<span>住宿</span></h2></div>
+			</div>
+      <div class="mainAll">
+        <% form_for @house_info, :url => {:controller => "admin", :action => "update_house_info"}, 
+          :editors => {:multinote => ['content', 'content_a', 'content_b']},
+          :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i7">
+						<h5>温馨住宿</h5>
+            <p><label>房间介绍:</label></p>
+            <p><% @index_content = IndexContent.new
+                 @index_content.content = @house_info.content if !@house_info.content.blank? %>
+              <%=fckeditor_textarea 'index_content', 'content' , :toolbarSet => 'Simple', :width => '650px', :height => '250px' %>
+            </p>
+            <p><label>价格明细:</label></p>
+            <p><% @index_content = IndexContent.new
+                 @index_content.content_a = @house_info.content_a if !@house_info.content_a.blank? %>
+              <%=fckeditor_textarea 'index_content', 'content_a' , :toolbarSet => 'Simple', :width => '650px', :height => '250px' %>
+            </p>
+            <p><label>特价房间:</label></p>
+            <p><% @index_content = IndexContent.new
+                 @index_content.content_b = @house_info.content_b if !@house_info.content_b.blank? %>
+              <%=fckeditor_textarea 'index_content', 'content_b' , :toolbarSet => 'Simple', :width => '650px', :height => '250px' %>
+            </p>
+						<p><input type="submit" value="保存" /></p>
+					</div>
+        <% end %>
+			</div>
+		</div>

@@ -1,0 +1,97 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<div class="minNav"><h2>首页<span>编辑</span></h2></div>
+			</div>
+			<table class="cmsNav">
+				<tr>
+					<th class="click"><a class="active" href="#i1">土特产</a></th>
+					<th class="title"><a href="#i2">温馨住宿</a></th>
+					<th class="user"><a href="#i3">农家美食</a></th>
+					<th class="time"><a href="#i4">旅游景点</a></th>
+					<th class="reply"><a href="#i5">娱乐项目</a></th>
+				</tr>
+			</table>
+      <div class="mainAll">
+        <% form_for @buy, :url => {:controller => "admin", :action => "update_buy"}, :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i1">
+						<h5>土特产</h5>
+						<p>
+							<label>文字编辑:</label>
+              <% @index_content = IndexContent.new
+                 @index_content.content = @buy.content if !@buy.content.blank? %>
+              <%=fckeditor_textarea 'index_content', 'content' , :toolbarSet => 'Simple', :width => '550px', :height => '150px' %>
+						</p>
+            <p><label>图片一：</label><%=f.file_field :pic_1 %> (图片规格 84 X 85)</p>
+            <p><label>图片二：</label><%=f.file_field :pic_2 %></p>
+            <p><label>图片三：</label><%=f.file_field :pic_3 %></p>
+            <p class="submit"><input type="submit" value="保存" /></p>
+            <div class="cmsImg">
+              <div class="imgBox"><%=image_tag(@buy.file_url('pic1'), :size => "84x85") if !@buy.pic1.blank? %><br/>图片一</div>
+              <div class="imgBox"><%=image_tag(@buy.file_url('pic2'), :size => "84x85") if !@buy.pic2.blank? %><br/>图片二</div>
+              <div class="imgBox"><%=image_tag(@buy.file_url('pic3'), :size => "84x85") if !@buy.pic3.blank? %><br/>图片三</div>
+            </div>
+					</div>
+        <% end %>
+        <% form_for @house, :url => {:controller => "admin", :action => "update_house"}, :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i2">
+						<h5>温馨住宿</h5>
+            <p><label>左大图片：</label><%=f.file_field :pic_1 %> (图片规格 145 X 89)</p>
+            <p><label>右小图片：</label><%=f.file_field :pic_2 %> (图片规格 75 X 44)</p>
+            <p><label>右小图片：</label><%=f.file_field :pic_3 %> (图片规格 75 X 44)</p>
+            <p><label>标题：</label><%=f.text_field :title , :class => "text" %></p>
+            <p><label>文字一：</label><%=f.text_field :s1 , :class => "text" %></p>
+            <p><label>文字二：</label><%=f.text_field :s2 , :class => "text" %></p>
+						<p class="submit"><input type="submit" value="保存" /></p>
+            <div class="cmsImg">
+              <div class="imgBox"><%=image_tag(@house.file_url('pic1'), :size => "145x89") if !@house.pic1.blank? %><br/>左大图片</div>
+              <div class="imgBox"><%=image_tag(@house.file_url('pic2'), :size => "75x44") if !@house.pic2.blank? %><br/>右小图片</div>
+              <div class="imgBox"><%=image_tag(@house.file_url('pic3'), :size => "75x44") if !@house.pic3.blank? %><br/>右小图片</div>
+            </div>
+					</div>
+        <% end %>
+        <% form_for @food, :url => {:controller => "admin", :action => "update_food"}, :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i3">
+						<h5>农家美食</h5>
+            <p><label>左大图片：</label><%=f.file_field :pic_1 %> (图片规格 145 X 89)</p>
+            <p><label>右小图片：</label><%=f.file_field :pic_2 %> (图片规格 75 X 44)</p>
+            <p><label>右小图片：</label><%=f.file_field :pic_3 %> (图片规格 75 X 44)</p>
+            <p><label>标题：</label><%=f.text_field :title , :class => "text" %></p>
+            <p><label>文字一：</label><%=f.text_field :s1 , :class => "text" %></p>
+            <p><label>文字二：</label><%=f.text_field :s2 , :class => "text" %></p>
+						<p class="submit"><input type="submit" value="保存" /></p>
+            <div class="cmsImg">
+              <div class="imgBox"><%=image_tag(@food.file_url('pic1'), :size => "145x89") if !@food.pic1.blank? %><br/>左大图片</div>
+              <div class="imgBox"><%=image_tag(@food.file_url('pic2'), :size => "75x44") if !@food.pic2.blank? %><br/>右小图片</div>
+              <div class="imgBox"><%=image_tag(@food.file_url('pic3'), :size => "75x44") if !@food.pic3.blank? %><br/>右小图片</div>
+            </div>
+					</div>
+        <% end %>
+        <% form_for @scene, :url => {:controller => "admin", :action => "update_scene"}, :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i4">
+						<h5>旅游景点</h5>
+            <p><label>图片：</label><%=f.file_field :pic_1 %> (图片规格 73 X 99)</p>
+            <p><label>文字一：</label><%=f.text_field :s1 , :class => "text" %></p>
+            <p><label>文字二：</label><%=f.text_field :s2 , :class => "text" %></p>
+            <p><label>文字三：</label><%=f.text_field :s3 , :class => "text" %></p>
+						<p class="submit"><input type="submit" value="保存" /></p>
+            <div class="cmsImg">
+              <div class="imgBox"><%=image_tag(@scene.file_url('pic1'), :size => "73x99") if !@scene.pic1.blank? %><br/>旅游景点</div>
+            </div>
+					</div>
+        <% end %>
+        <% form_for @fun, :url => {:controller => "admin", :action => "update_fun"}, :html => {:class => 'cmsForm', :multipart => true} do |f| %>
+					<div class="cmsBox" id="i5">
+						<h5>娱乐项目</h5>
+            <p><label>图片：</label><%=f.file_field :pic_1 %> (图片规格 73 X 99)</p>
+            <p><label>文字一：</label><%=f.text_field :s1 , :class => "text" %></p>
+            <p><label>文字二：</label><%=f.text_field :s2 , :class => "text" %></p>
+            <p><label>文字三：</label><%=f.text_field :s3 , :class => "text" %></p>
+						<p class="submit"><input type="submit" value="保存" /></p>
+            <div class="cmsImg">
+              <div class="imgBox"><%=image_tag(@fun.file_url('pic1'), :size => "73x99") if !@fun.pic1.blank? %><br/>娱乐项目</div>
+            </div>
+					</div>
+        <% end %>
+
+			</div>
+		</div>

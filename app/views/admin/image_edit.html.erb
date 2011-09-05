@@ -1,0 +1,36 @@
+    <div class="mainBox">
+			<div class="minNav">
+		    <h2>图片<span>编辑</span></h2>
+		    <div class="right"><a href="/admin/image">返回列表</a></div>
+      </div>
+      <div class="mainAll">
+        <% form_tag '/admin/image_edit', :method => :post, :multipart => true, :class=>'cmsForm' do %>
+					<h6 class="mb5">按分类上传温馨住宿及农家美食；图片建议大小(388 X 266) </h6>
+          <% unless flash[:errors].blank? %>
+          <div style="color:red" >
+            <%= flash[:errors].join("<br />") %>
+          </div>
+          <% end %>
+          <% unless params[:id].blank? %>
+            <%=hidden_field_tag :id, params[:id] %>
+          <% end %>
+          <p><label>选择类型：</label>
+            <%=select('picture', "category", Const::PICTURE_CATEGORY.keys.map{|k| [Const::PICTURE_CATEGORY[k],k]}) %>
+          </p>
+          <p><label>名称：</label>
+            <%=text_field 'picture', 'name', :class=>'text' %>
+          </p>
+          <p>
+            <label>图片：</label>
+            <%=file_field 'picture', 'picture'%>
+          </p>
+          <p class="act">
+            <input class="submit" type="submit" value="完成" name="commit"/>
+            <!--
+            <input class="button" type="reset" value="重置"/>
+            -->
+          </p>
+        <% end %>
+			</div>
+    </div>
+  </div>

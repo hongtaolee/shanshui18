@@ -1,0 +1,6 @@
+				<ul class="mb15">
+          <li><a href="/fun/index" class="<%='active' if ['index'].include?(current_action) || (current_controller == 'post' && current_action == 'show' && Const::JINGDIAN_PAGE_IDS.values.include?(params[:id].to_i)) %>">周边景点</a></li>
+          <li><a href="/fun/fun1" class="<%='active' if ['fun1'].include?(current_action) || (current_controller == 'post' && current_action == 'show' && Const::XIUXIAN_PAGE_IDS.values.include?(params[:id].to_i)) %>">户外休闲</a></li>
+          <li><a href="/fun/fun2" class="<%='active' if ['fun2'].include?(current_action) || (current_controller == 'post' && current_action == 'show' && Const::YULE_PAGE_IDS.values.include?(params[:id].to_i)) %>">室内娱乐</a></li>
+				</ul>
+				<img src="/images/il2.gif" />

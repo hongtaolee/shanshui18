@@ -1,0 +1,75 @@
+    <div class="mainBox">
+			<div class="minNav">
+				<h2>农家乐资讯<span>编辑</span></h2>
+        <div class="right">
+          <% if @post.category.to_i == Const::NEWS_POST_CATEGORY %>
+          <a href="/admin/post_news">返回列表页</a>
+          <% elsif @post.category.to_i == Const::BUY_POST_CATEGORY %>
+          <% elsif @post.category.to_i == Const::FUN_POST_CATEGORY %>
+          <a href="/admin/post_fun">返回列表页</a>
+          <% else %>
+          <a href="/admin/post">返回列表页</a>
+          <% end %>
+        </div>
+			</div>
+			<div class="mainAll">
+        <% form_tag '/admin/post_edit', :method => :post, :class=>'cmsForm' do %>
+          <% unless flash[:errors].blank? %>
+          <div style="color:red" >
+            <%= flash[:errors].join("<br />") %>
+          </div>
+          <% end %>
+          <% unless params[:id].blank? %>
+            <%=hidden_field_tag :id, params[:id] %>
+          <% end %>
+          <p><label>选择类型：</label>
+          <% if !@post.category.blank? %>
+          <% if @post.category.to_i == Const::NEWS_POST_CATEGORY.to_i %>
+            <%=select('post', "category", [['最新动态',Const::NEWS_POST_CATEGORY]]) %>
+          <% elsif @post.category.to_i == Const::FUN_POST_CATEGORY.to_i %>
+            <%=select('post', "category", [['风景娱乐',Const::FUN_POST_CATEGORY]]) %>
+          <% elsif @post.category.to_i == Const::BUY_POST_CATEGORY.to_i %>
+            <%=select('post', "category", [['土特产代购',Const::BUY_POST_CATEGORY]]) %>
+          <% else %>
+            <%=select('post', "category", Const::NJL_POST_CATEGORY.map{|k| [Const::POST_CATEGORY_HASH[k],k]}) %>
+          <% end %>
+          <% else %>
+            <%=select('post', "category", Const::NJL_POST_CATEGORY.map{|k| [Const::POST_CATEGORY_HASH[k],k]}) %>
+          <% end %>
+          </p>
+        
+          <% unless [Const::BUY_POST_CATEGORY, Const::FUN_POST_CATEGORY].include?(@post.category.to_i) %>
+          <p>
+            <label>作者：</label>
+            <%=text_field 'post', 'author', :class=>'text' %>
+          </p>
+          <% end %>
+          <% @post.title = "土特产代购" if @post.category.to_i == Const::BUY_POST_CATEGORY %>
+          <p>
+            <label>标题：</label>
+            <%=text_field 'post', 'title', :class=>'text' %>
+          </p>
+          <% unless [Const::BUY_POST_CATEGORY, Const::FUN_POST_CATEGORY].include?(@post.category.to_i) %>
+          <p>
+            <label>发表时间：</label>
+            <%=date_select 'post', 'publish_date', :start_year => 2007, :use_month_numbers => true , :order => [:year, :month, :day]%>
+          </p>
+          <p>
+            <label>状态设置：</label>
+            <%= check_box 'post', 'is_top' %> 置顶
+            <%= check_box 'post', 'is_new' %> 置为最新活动
+          </p>
+          <% end %>
+          <p>
+            <label>内容：</label>
+            <%=fckeditor_textarea 'post', 'html_content', :toolbarSet => 'Simple', :width => '100%', :height => 300 %>
+          </p>
+          <p class="act">
+            <input class="submit" type="submit" value="完成" name="commit" />
+            <!--
+            <input class="button" type="reset" value="重置" />
+            -->
+          </p>
+        <% end %>
+      </div>
+    </div>

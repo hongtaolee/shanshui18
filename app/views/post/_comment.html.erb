@@ -1,0 +1,23 @@
+<div class="replyForm" id="post_comments">
+  <% form_remote_tag :url => "/post/comment/#{@post.id}" do %>
+    <p><label>发表评论：</label><%=text_area 'comment', 'content' %></p>
+    <p><label>您的署名：</label><%=text_field 'comment', 'username', :class=>"text" %></p>
+					  <p><input type="submit" value="发表" /></p>
+  <% end %>
+				</div>
+				<div class="messgeList">
+  <% @comments.each_with_index do |c,i| %>
+  <div class="messgeBox" id="comment_<%=c.id %>">
+						<p class="title">
+      <%=h c.username %>
+      <span class="ml5"><%=datetime_format(c.created_at)%></span> 
+      <% if manager? %>
+							<a class="ml5" href="#post_comments">回复</a> | 
+    	<%=link_to_remote('删除',:url=>{:controller=>'post',:action=>'comment_delete',:id=>c.id},:before=>"if (!confirm('确定要删除该评论吗？')) { return false; };")%>
+      <% end %>
+						</p>
+    <div><%=c.html_content %></div>
+					</div>
+  <% end unless @comments.blank? %>
+  <%=render :partial => "share/page" %>
+				</div>

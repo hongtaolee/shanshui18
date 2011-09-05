@@ -1,0 +1,38 @@
+		<div class="mainBox">
+			<div class="minNav">
+        <p>
+          <a href="/post/show/<%=@post.id%>"><%=h @post.title %></a> &lt; 
+          <% if Const::JINGDIAN_PAGE_IDS.values.include?(@post.id) %>
+          <a href="/fun/index">周边景点</a> &lt; 
+          <% elsif Const::YULE_PAGE_IDS.values.include?(@post.id) %>
+          <a href="/fun/fun2">室内娱乐</a> &lt; 
+          <% elsif Const::XIUXIAN_PAGE_IDS.values.include?(@post.id) %>
+          <a href="/fun/fun1">户外休闲</a> &lt; 
+          <% end %>
+
+          <a href="/">首页</a></p>
+			</div>
+      <div class="mainAll funText">
+        <table>
+					<tr>
+          <% if Const::JINGDIAN_PAGE_IDS.values.include?(@post.id) %>
+						<th class="click"><a href="/fun/index">重点推荐</a></th>
+            <% Const::JINGDIAN_PAGES.keys.sort.each do |pk| %>
+              <th class="<%=Const::NAV_CLASS[pk] %>"><a class="<%='active' if @post.id == Const::JINGDIAN_PAGE_IDS[pk] %>" href="/post/show/<%=Const::JINGDIAN_PAGE_IDS[pk]%>"><%=h Const::JINGDIAN_PAGES[pk]%></a></th>
+            <% end %>
+          <% elsif Const::YULE_PAGE_IDS.values.include?(@post.id) %>
+						<th class="click"><a href="/fun/fun2">重点推荐</a></th>
+            <% Const::YULE_PAGES.keys.sort.each do |pk| %>
+              <th class="<%=Const::NAV_CLASS[pk] %>"><a class="<%='active' if @post.id == Const::YULE_PAGE_IDS[pk] %>" href="/post/show/<%=Const::YULE_PAGE_IDS[pk]%>"><%=h Const::YULE_PAGES[pk]%></a></th>
+            <% end %>
+          <% elsif Const::XIUXIAN_PAGE_IDS.values.include?(@post.id) %>
+						<th class="click"><a href="/fun/fun1">重点推荐</a></th>
+            <% Const::XIUXIAN_PAGES.keys.sort.each do |pk| %>
+              <th class="<%=Const::NAV_CLASS[pk] %>"><a class="<%='active' if @post.id == Const::XIUXIAN_PAGE_IDS[pk] %>" href="/post/show/<%=Const::XIUXIAN_PAGE_IDS[pk]%>"><%=h Const::XIUXIAN_PAGES[pk]%></a></th>
+            <% end %>
+          <% end %>
+					</tr>
+				</table>
+        <%=@post.html_content %>
+			</div>
+		</div>

@@ -1,0 +1,7 @@
+				<ul class="mb15">
+          <li><a href="/info/index" class="<%='active' if ['index'].include?(current_action) %>">简介</a></li>
+          <li><a class="<%='active' if current_controller == 'post' && ['news', 'show'].include?(current_action) %>" href="/post/news">最新动态</a></li>
+          <li><a href="/info/njwh" class="<%='active' if ['njwh'].include?(current_action) %>">山水农家文化</a></li>
+          <li><a class="<%='active' if current_controller == 'post' && current_action == 'buy' %>" href="/post/buy">土特产代购</a></li>
+        </ul>
+        <img src="/images/il2.gif" />

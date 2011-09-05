@@ -1,0 +1,35 @@
+		<div class="mainBox">
+			<div class="minNav">
+        <p><%=h @post.title %> &lt; 
+        <% if @category == 1 %>
+        <a href="/post/news">最新动态</a> &lt; 
+        <a href="/info">简介</a> &lt;
+        <a href="/">首页</a>
+        <% else %>
+        <a href="/post">农家乐资讯</a> &lt;
+        <a href="/">首页</a>
+        <% end %>
+      </p>
+			</div>
+			<div class="mainAll infoText">
+        <h4><%=h @post.title %></h4>
+        <%=@post.html_content %>
+        <p class="noneIndent quote">本文引用地址：http://www.shanshui18.com/post/show/<%=@post.id %></p>
+        <% if @category.to_i > 2 %>
+        <% if lp = @post.last_post(@category) %>
+        <p class="noneIndent"><a class="quote" href="/post/show/<%=lp.id %>">上一篇 <%=h lp.title %></a></p>
+        <% end %>
+        <% end %>
+        <% if np = @post.next_post(@category) %>
+        <p class="noneIndent"><a class="quote" href="/post/show/<%=np.id %>">下一篇 <%=h np.title %></a></p>
+        <% end %>
+        <% if @category == 1 %>
+        <p class="backNew"><a href="/post/news">返回列表</a></p>
+        <% else %>
+        <p class="backNew"><a href="/post/index/<%=@category %>">返回列表</a></p>
+        <% end %>
+        <% if @category.to_i > 2 %>
+        <%=render :partial => "post/comment" %>
+        <% end %>
+			</div>
+		</div>

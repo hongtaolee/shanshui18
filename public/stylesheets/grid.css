@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------
+   grid.css - 重用的样式
+-------------------------------------------------------------- */
+/*---------首页的相册--------*/
+#slideshow {list-style:none; color:#fff}
+#slideshow span {display:none}
+.food #wrapper { background:url(../images/top/foodb_3.jpg) no-repeat left top; width:657px; height:368px}
+.house #wrapper { background:url(../images/top/foodb_3.jpg) no-repeat left top; width:657px; height:367px}
+#wrapper * {margin:0; padding:0}
+#fullsize {position:relative;  width:388px; height:350px; margin-left:41px; margin-top:26px; display:inline}
+#information {position:absolute; top:275px; text-align:right; width:388px; height:50px; color:#fff; overflow:hidden; z-index:200; opacity:.7; filter:alpha(opacity=70)}
+#information a{ text-decoration:none; color:#fff; font-size:12px; font-weight:bold}
+#information p{ color:#939393; text-align:left; font-family:"华文楷体"; font-size:14px}
+#information p a:hover{ text-decoration:underline}
+#information h3 {font-family:'华文楷体'; font-size:16px; color:#3D3D3D; text-align:right;font-weight:normal}
+/*#information p {padding:0 8px 8px}*/
+#image {width:388px}
+#image img {position:absolute; z-index:25; width:388px; overflow:hidden; height:266px}
+.imgnav {position:absolute; width:25%; height:25px; cursor:pointer; z-index:150}
+#imgprev {left:0; background:url(images/left.gif) left center no-repeat}
+#imgnext {right:0; background:url(images/right.gif) right center no-repeat}
+#imglink {position:absolute; height:266px; width:388px; z-index:100; opacity:.4; filter:alpha(opacity=40)}
+/*.linkhover {background:url(images/link.gif) center center no-repeat}*/
+#thumbnails {float:left; width:198px; margin-left:20px; margin-top:10px}
+	#thumbnails img{ display:block; margin:0 1px 10px}
+#slideleft {float:left; width:20px; height:81px; background:url(images/scroll-left.gif) center center no-repeat; background-color:#222}
+#slideleft:hover {background-color:#333}
+#slideright {float:right; width:20px; height:81px; background:#222 url(images/scroll-right.gif) center center no-repeat}
+#slideright:hover {background-color:#333}
+#slidearea {position:relative;width:200px; overflow:hidden}
+#slider {left:0; width:200px}
+#slider img {cursor:pointer; background:#000 url(../images/top/house14.jpg) no-repeat left top; display:inline; padding:7px 7px 8px 7px; margin-bottom:0px; width:47px; height:47px; float:left}
