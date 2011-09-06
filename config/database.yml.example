@@ -1,0 +1,19 @@
+defaults: &defaults
+  adapter: mysql
+  host: 192.168.0.2
+  port: 3306
+  username: beta
+  password: 123
+  encoding: utf8
+  
+development:
+  database: shanshui18
+  <<: *defaults
+
+test:
+  database: shanshui18 
+  <<: *defaults
+
+production:
+  database: shanshui18 
+  <<: *defaults
