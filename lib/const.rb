@@ -55,6 +55,9 @@ class Const
     15 => "烧烤类"
   }
 
+  CS_CATEGORY = {
+    16 => '真人cs'
+  }
   FUN_CATEGORY = {
     21 => "重点推荐",
     22 => "周边景点",
@@ -69,7 +72,9 @@ class Const
     :fun => 5,
     :ask => 6,
     :house_info => 7,
-    :food_info => 8
+    :food_info => 8,
+    :cs_info => 9,
+    :cs => 10
   }
   
   JINGDIAN_PAGES = {
