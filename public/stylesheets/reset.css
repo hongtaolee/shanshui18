@@ -272,7 +272,7 @@ a:hover{ text-decoration:none}
 		.new_wrap .page a.active{ font-weight:bold; color:#287715}
 /*------------温馨住宿-------------*/
 .house{}
-	.food #content,.cms #content,.house #content{ background:url(../images/top/house13.jpg) repeat-y left top}
+	.cs #content,.food #content,.cms #content,.house #content{ background:url(../images/top/house13.jpg) repeat-y left top}
 	.food .sidenav,.house .sidenav{ background:url(../images/top/house_3.jpg) no-repeat left top; height:23px}
 		.house .sidenav p{ margin-left:240px}
 		.food .sidenav p{ margin-left:330px}
@@ -285,14 +285,14 @@ a:hover{ text-decoration:none}
 .cs .minNav{ background:url(../images/top/cs-r.jpg) no-repeat left top; height:51px; width:657px}
 
 /*.house .houseText{ margin-top:15px}*/
-	.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
-	.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
-		.food .mainAll h4 span,.house .mainAll h4 span{ color:#659F27}
-	.food .mainAll p,.house .mainAll p{ text-indent:0px; margin-bottom:10px; color:#4A5234}
-	.food .mainAll h4,.food .mainAll p,.food table,.house .mainAll h4,.house .mainAll p,.house table{ margin-left:30px}
-	.food table,.cmsNav,.fun table,.house table{ width:597px; overflow:hidden; display:block}
-		.food table th,.cmsNav th,.house table th,.fun table th{ height:31px; line-height:31px; float:left; overflow:hidden}
-			.food th a,.cmsNav th a,.fun table th a,.house table th a{font-weight:normal; color:#729827; text-decoration:none}
+	.cs .houseText h5,.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
+	.cs .mainAll h4,.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
+		.cs .mainAll h4 span,.food .mainAll h4 span,.house .mainAll h4 span{ color:#659F27}
+	.cs .mainAll p,.food .mainAll p,.house .mainAll p{ text-indent:0px; margin-bottom:10px; color:#4A5234}
+	.cs .mainAll h4,.cs .mainAll p,.cs table.food .mainAll h4,.food .mainAll p,.food table,.house .mainAll h4,.house .mainAll p,.house table{ margin-left:30px}
+	.cs table,.food table,.cmsNav,.fun table,.house table{ width:597px; overflow:hidden; display:block}
+		.cs table th,.food table th,.cmsNav th,.house table th,.fun table th{ height:31px; line-height:31px; float:left; overflow:hidden}
+			.cs th a,.food th a,.cmsNav th a,.fun table th a,.house table th a{font-weight:normal; color:#729827; text-decoration:none}
 			.food th a.active,.cmsNav th a.active,.house table th a.active,.fun table th a.active{ color:#EF8100}
 			.food th a:hover,.cmsNav th a:hover,.fun table th a:hover,.house table th a:hover{ text-decoration:underline; color:#EF8100}
 		.food table .click,.cmsNav .click,.house table .click,.fun table .click{ background:url(../images/thh_6.jpg) no-repeat left top; width:131px}
