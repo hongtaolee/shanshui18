@@ -202,7 +202,7 @@ class AdminController < ApplicationController
   end
   
   def cms_cs_info
-    @house_info = IndexContent.get_content(:cs_info)
+    @cs_info = IndexContent.get_content(:cs_info)
     @nav_class = "cms"
   end
 
