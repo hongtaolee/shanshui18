@@ -281,7 +281,7 @@ a:hover{ text-decoration:none}
 	.house .minNav{ background:url(../images/top/house_11.jpg) no-repeat left top; height:51px; width:657px}
 	.food .minNav{ background:url(../images/top/food_3.jpg) no-repeat left top; width:657px; height:51px}
 	.food .sideBox{ background:url(../images/top/food1.jpg) no-repeat left top}
-.food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
+.cs .mainAll,.food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
 .cs .minNav{ background:url(../images/top/cs-r.jpg) no-repeat left top; height:51px; width:657px}
 
 /*.house .houseText{ margin-top:15px}*/
