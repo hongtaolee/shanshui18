@@ -199,6 +199,11 @@ class AdminController < ApplicationController
     @house_info = IndexContent.get_content(:house_info)
     @nav_class = "cms"
   end
+  
+  def cms_cs_info
+    @house_info = IndexContent.get_content(:cs_info)
+    @nav_class = "cms"
+  end
 
   def update_buy
     @buy = IndexContent.get_content(:buy)

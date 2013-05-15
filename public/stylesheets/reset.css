@@ -54,6 +54,10 @@ a:hover{ text-decoration:none}
   .footer .nav,.contact .nav{background:url(../images/top/contact_nav.jpg) no-repeat left top; height:47px}
   .new_wrap .nav{background:url(../images/top/sub_nav.jpg) no-repeat left top; height:47px}
   .fun .nav{background:url(../images/top/fun_nav.jpg) no-repeat left top; height:44px}
+  
+  #wrap .nav{background:url('../images/top/fun_nav1.jpg') no-repeat left top;height:44px;}
+   #wrap .nav li{float:left;}
+    #wrap .nav a{display:block;float:left;width:auto;}
 	.nav ul li{ float:left; display:block; background-position:left top; background-repeat:no-repeat; height:47px}
 		.nav ul li a{ height:18px; margin-top:20px; display:block;width:75px}
 			.nav ul li.index a{ width:50px; margin-left:65px; display:inline}
@@ -273,11 +277,13 @@ a:hover{ text-decoration:none}
 		.house .sidenav p{ margin-left:240px}
 		.food .sidenav p{ margin-left:330px}
 	.food .sideBox,.house .sideBox{ background:url(../images/top/house_10.jpg) no-repeat left top}
-		
+	.cs .sideBox{background:url('../images/top/cs-l.jpg') no-repeat left top;}	
 	.house .minNav{ background:url(../images/top/house_11.jpg) no-repeat left top; height:51px; width:657px}
 	.food .minNav{ background:url(../images/top/food_3.jpg) no-repeat left top; width:657px; height:51px}
 	.food .sideBox{ background:url(../images/top/food1.jpg) no-repeat left top}
 .food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
+.cs .minNav{ background:url(../images/top/cs-r.jpg) no-repeat left top; height:51px; width:657px}
+
 /*.house .houseText{ margin-top:15px}*/
 	.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
 	.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
