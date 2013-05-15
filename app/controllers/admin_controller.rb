@@ -181,6 +181,7 @@ class AdminController < ApplicationController
     @house = IndexContent.get_content(:house)
     @scene = IndexContent.get_content(:scene)
     @fun = IndexContent.get_content(:fun)
+    @cs = IndexContent.get_content(:cs)
     
     @nav_class = "cms"
   end
