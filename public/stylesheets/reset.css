@@ -56,8 +56,8 @@ a:hover{ text-decoration:none}
   .fun .nav{background:url(../images/top/fun_nav.jpg) no-repeat left top; height:44px}
   
   #wrap .nav{background:url('../images/top/fun_nav1.jpg') no-repeat left top;height:44px;}
-   #wrap .nav li{float:left;padding-left:25px;line-height:44px;}
-    #wrap .nav a{display:block;float:left;width:auto;font-size: 14px;font-weight: bold;text-decoration: none;color:#46510c;}
+   #wrap .nav li{float:left;padding:0px 0px 0px 25px;line-height:44px;}
+    #wrap .nav a{display:block;float:left;width:auto;font-size: 14px;font-weight: bold;text-decoration: none;color:#46510c;margin:0px;}
 	.nav ul li{ float:left; display:block; background-position:left top; background-repeat:no-repeat; height:47px}
 		.nav ul li a{ height:18px; margin-top:20px; display:block;width:75px}
 			.nav ul li.index a{ width:50px; margin-left:65px; display:inline}
