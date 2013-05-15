@@ -56,8 +56,8 @@ a:hover{ text-decoration:none}
   .fun .nav{background:url(../images/top/fun_nav.jpg) no-repeat left top; height:44px}
   
   #wrap .nav{background:url('../images/top/fun_nav1.jpg') no-repeat left top;height:44px;}
-   #wrap .nav li{float:left;}
-    #wrap .nav a{display:block;float:left;width:auto;}
+   #wrap .nav li{float:left;padding-left:25px;line-height:44px;}
+    #wrap .nav a{display:block;float:left;width:auto;font-size: 14px;font-weight: bold;text-decoration: none;color:#46510c;}
 	.nav ul li{ float:left; display:block; background-position:left top; background-repeat:no-repeat; height:47px}
 		.nav ul li a{ height:18px; margin-top:20px; display:block;width:75px}
 			.nav ul li.index a{ width:50px; margin-left:65px; display:inline}
@@ -86,7 +86,7 @@ a:hover{ text-decoration:none}
     #subnav_fun p{margin-left:405px}
     #subnav_food p{margin-left:290px}
     #subnav_house p{margin-left:180px}
-    #subnav_info p{margin-left:130px}
+    #subnav_info p{margin-left:90px}
     #subnav_footer p{margin-left:330px}
 /*---------content--------------*/
 #content{ width:100%; float:left; padding-bottom:30px}
