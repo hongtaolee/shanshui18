@@ -3,7 +3,7 @@
 		<div class="minNav"><h2>真人<span>CS</span></h2></div>
 	</div>
 <div class="mainAll">
-  <% form_for @house_info, :url => {:controller => "admin", :action => "update_cs_info"}, 
+  <% form_for @cs_info, :url => {:controller => "admin", :action => "update_cs_info"}, 
     :editors => {:multinote => ['content', 'content_a', 'content_b']},
     :html => {:class => 'cmsForm', :multipart => true} do |f| %>
 			<div class="cmsBox" id="i7">
