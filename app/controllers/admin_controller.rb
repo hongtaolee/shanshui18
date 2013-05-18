@@ -242,6 +242,18 @@ class AdminController < ApplicationController
     redirect_to :controller => "admin", :action => "cms_index", :anchor => "#i3"    
   end
 
+  def update_cs
+    @cs = IndexContent.get_content(:cs)
+    if @cs.new_record?
+      @cs = IndexContent.new(params[:index_content])
+      @cs.category = Const::IC_CATEGORY[:cs]
+      @cs.save
+    else
+      @cs.update_attributes(params[:index_content])
+    end
+    redirect_to :controller => "admin", :action => "cms_index", :anchor => "#i6"    
+  end
+
   def update_scene
     @scene = IndexContent.get_content(:scene)
     if @scene.new_record?
@@ -300,6 +312,18 @@ class AdminController < ApplicationController
       @food_info.update_attributes(params[:index_content])
     end
     redirect_to :controller => "admin", :action => "cms_food_info"    
+  end
+  
+  def update_cs_info
+    @cs_info = IndexContent.get_content(:cs_info)
+    if @cs_info.new_record?
+      @cs_info = IndexContent.new(params[:index_content])
+      @cs_info.category = Const::IC_CATEGORY[:cs_info]
+      @cs_info.save
+    else
+      @cs_info.update_attributes(params[:index_content])
+    end
+    redirect_to :controller => "admin", :action => "cms_cs_info"    
   end
 
   private
