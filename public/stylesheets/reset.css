@@ -38,7 +38,8 @@ a:hover{ text-decoration:none}
  /*-- .index .logo{width:218px; height:107px; background:url(../images/top/logo1.jpg) no-repeat left top}*/
 	.mainNav{ width:762px; float:left}
 /*	.index .sidenav{ background:url(../images/top/top3.jpg) no-repeat left top; height:38px; float:left; padding-left:0px}*/
-		.sidenav{background:url(../images/top/sidenav.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.sidenav{background:url(../images/top/sidenav.jpg) no-repeat left top; width:100%; float:left; height:25px;overflow:hidden;}
+		.sidenav p{line-height:25px;}
 		.cms .sidenav,.info .sidenav{background:url(../images/top/info_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
 		.fun .sidenav{background:url(../images/top/fun_side.jpg) no-repeat left top; width:100%; float:left; height:24px}
 		.footer .sidenav,.contact .sidenav,.new_wrap .sidenav{background:url(../images/top/sub_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
