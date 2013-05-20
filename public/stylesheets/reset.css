@@ -300,7 +300,7 @@ a:hover{ text-decoration:none}
 		.cmsNav .user,.house table .user,.food table .user,.fun table .user{ background:url(../images/thh_8.jpg) no-repeat left top; width:113px}
 		.cmsNav .time,.house table .time,.fun table .time,.food table .time{  background:url(../images/thh_9.jpg) no-repeat left top; width:108px; text-align:center}
 		.cmsNav .reply,.house table .reply,.fun table .reply,.food table .reply{  background:url(../images/thh_10.jpg) no-repeat left top; width:135px}
-	.albums{ background:url(../images/88_3.jpg) no-repeat left top; width:700px;margin-bottom:20px; height:370px}
+	.albums{ background:url(../images/88_3.jpg) no-repeat left top; width:700px;margin-bottom:20px; height:370px;float:left;}
 		.albums .left{ width:388px; height:266px; margin-left:40px; margin-top:26px}
 			.albums .left .title{text-align:right; font-family:'华文楷体'; font-size:20px; color:#3D3D3D; background:none; width:360px; line-height:30px}
 			.albums .right{ float:left; width:198px; margin-left:20px; margin-top:10px} 
