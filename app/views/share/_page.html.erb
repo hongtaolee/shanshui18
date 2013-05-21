@@ -1,5 +1,5 @@
 <% if @total_page > 1 %>
-<div class="page">
+<div class="page" style="clear:both">
   <% if params[:page].to_i > 3 %>
   <%=link_to image_tag("th_15.jpg"), :overwrite_params => {:page => 1} %>
   <% end %>

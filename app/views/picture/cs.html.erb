@@ -1,0 +1,89 @@
+		<div class="mainBox">
+			<div class="minNav">
+				<p>真人CS &lt; <a href="/">西安山水农家乐</a></p>
+			</div>
+			<div class="mainAll">
+				<h4>精彩<span>瞬间</span></h4>
+				<p>智慧与力量的结合，协作与对抗的统一，狼拼虎战！</p>
+				
+				<div id="h1" class="albums">
+					<ul id="slideshow">
+						<% @pictures.each do |p| %>
+						<li>
+							<h3><%=h p.name %></h3>
+							<span><%=p.file_url %></span>
+							<p></p>
+							<a href="javascript:void(0);"><img src="<%=p.file_url %>" alt="<%=h p.name %>" /></a>					
+						</li>
+						<% end %>            
+					</ul>
+					<div id="wrapper">
+						<div id="fullsize" style=" float:left;">
+							<div id="imgprev" class="imgnav" title="Previous Image" style="display:none;"></div>
+							<div id="imglink"></div>
+							<div id="imgnext" class="imgnav" title="Next Image"  style="display:none;"></div>
+							<div id="image"></div>
+							<div id="information">
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+						<div id="thumbnails" style=" float:left;">
+							<div id="slideleft" title="Slide Left"  style="display:none;"></div>
+							<div id="slidearea">
+								<div id="slider"></div>
+							</div>
+							<div id="slideright" title="Slide Right" style="display:none;"></div>
+						</div>
+					</div>
+				</div>
+				<div id="h2" class="houseText">
+					<h5><img src="/images/funr5.png"/>门票价格</h5>
+					<table class="houseTable">
+						<thead>
+							<tr>
+								<td style="width:400px;">门票类型</td>
+								<td style="width:140px">价格</td>
+							</tr>
+						</thead>
+						<tr>
+							<td class="left">西安翠华山石蛇岭真人CS-半天体验价</td>
+							<td>￥88.0</td>
+						</tr>
+						<tr>
+							<td class="left">全天西安翠华山真人CS（含半天地面拓展）</td>
+							<td>￥160.0</td>
+						</tr>
+					</table>
+				</div>
+				<div id="h4" class="houseText">
+					<h5><img src="/images/funr5.png"/>项目介绍</h5>
+					<% if @content && !@content.content_b.blank? %>
+					<%=@content.content_b %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript" src="/javascripts/slide.js" ></script>
+<script type="text/javascript">
+	$('slideshow').style.display='none';
+	$('wrapper').style.display='block';
+	var slideshow=new TINY.slideshow("slideshow");
+	window.onload=function(){
+		slideshow.auto=true;
+		slideshow.speed=5;
+		slideshow.link="linkhover";
+		slideshow.info="information";
+		slideshow.thumbs="slider";
+		slideshow.left="slideleft";
+		slideshow.right="slideright";
+		slideshow.scrollSpeed=4;
+		slideshow.spacing=1;
+		slideshow.active="#fff";
+		slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+	}
+</script>
+</body>
+</html>

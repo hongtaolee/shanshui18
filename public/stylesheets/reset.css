@@ -38,7 +38,8 @@ a:hover{ text-decoration:none}
  /*-- .index .logo{width:218px; height:107px; background:url(../images/top/logo1.jpg) no-repeat left top}*/
 	.mainNav{ width:762px; float:left}
 /*	.index .sidenav{ background:url(../images/top/top3.jpg) no-repeat left top; height:38px; float:left; padding-left:0px}*/
-		.sidenav{background:url(../images/top/sidenav.jpg) no-repeat left top; width:100%; float:left; height:25px}
+		.sidenav{background:url(../images/top/sidenav.jpg) no-repeat left top; width:100%; float:left; height:25px;overflow:hidden;}
+		.sidenav p{line-height:25px;}
 		.cms .sidenav,.info .sidenav{background:url(../images/top/info_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
 		.fun .sidenav{background:url(../images/top/fun_side.jpg) no-repeat left top; width:100%; float:left; height:24px}
 		.footer .sidenav,.contact .sidenav,.new_wrap .sidenav{background:url(../images/top/sub_side.jpg) no-repeat left top; width:100%; float:left; height:25px}
@@ -54,6 +55,10 @@ a:hover{ text-decoration:none}
   .footer .nav,.contact .nav{background:url(../images/top/contact_nav.jpg) no-repeat left top; height:47px}
   .new_wrap .nav{background:url(../images/top/sub_nav.jpg) no-repeat left top; height:47px}
   .fun .nav{background:url(../images/top/fun_nav.jpg) no-repeat left top; height:44px}
+  
+  #wrap .nav{background:url('../images/top/fun_nav1.jpg') no-repeat left top;height:44px;}
+   #wrap .nav li{float:left;padding:0px 0px 0px 25px;line-height:44px;}
+    #wrap .nav a{display:block;float:left;width:auto;font-size: 14px;font-weight: bold;text-decoration: none;color:#46510c;margin:0px;}
 	.nav ul li{ float:left; display:block; background-position:left top; background-repeat:no-repeat; height:47px}
 		.nav ul li a{ height:18px; margin-top:20px; display:block;width:75px}
 			.nav ul li.index a{ width:50px; margin-left:65px; display:inline}
@@ -82,7 +87,7 @@ a:hover{ text-decoration:none}
     #subnav_fun p{margin-left:405px}
     #subnav_food p{margin-left:290px}
     #subnav_house p{margin-left:180px}
-    #subnav_info p{margin-left:130px}
+    #subnav_info p{margin-left:90px}
     #subnav_footer p{margin-left:330px}
 /*---------content--------------*/
 #content{ width:100%; float:left; padding-bottom:30px}
@@ -268,25 +273,27 @@ a:hover{ text-decoration:none}
 		.new_wrap .page a.active{ font-weight:bold; color:#287715}
 /*------------温馨住宿-------------*/
 .house{}
-	.food #content,.cms #content,.house #content{ background:url(../images/top/house13.jpg) repeat-y left top}
+	.cs #content,.food #content,.cms #content,.house #content{ background:url(../images/top/house13.jpg) repeat-y left top}
 	.food .sidenav,.house .sidenav{ background:url(../images/top/house_3.jpg) no-repeat left top; height:23px}
 		.house .sidenav p{ margin-left:240px}
 		.food .sidenav p{ margin-left:330px}
 	.food .sideBox,.house .sideBox{ background:url(../images/top/house_10.jpg) no-repeat left top}
-		
+	.cs .sideBox{background:url('../images/top/cs-l.jpg') no-repeat left top;}	
 	.house .minNav{ background:url(../images/top/house_11.jpg) no-repeat left top; height:51px; width:657px}
 	.food .minNav{ background:url(../images/top/food_3.jpg) no-repeat left top; width:657px; height:51px}
 	.food .sideBox{ background:url(../images/top/food1.jpg) no-repeat left top}
-.food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
+.cs .mainAll,.food .mainAll,.house .mainAll{ float:left; width:657px; overflow:hidden}
+.cs .minNav{ background:url(../images/top/cs-r.jpg) no-repeat left top; height:51px; width:657px}
+
 /*.house .houseText{ margin-top:15px}*/
-	.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
-	.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
-		.food .mainAll h4 span,.house .mainAll h4 span{ color:#659F27}
-	.food .mainAll p,.house .mainAll p{ text-indent:0px; margin-bottom:10px; color:#4A5234}
-	.food .mainAll h4,.food .mainAll p,.food table,.house .mainAll h4,.house .mainAll p,.house table{ margin-left:30px}
-	.food table,.cmsNav,.fun table,.house table{ width:597px; overflow:hidden; display:block}
-		.food table th,.cmsNav th,.house table th,.fun table th{ height:31px; line-height:31px; float:left; overflow:hidden}
-			.food th a,.cmsNav th a,.fun table th a,.house table th a{font-weight:normal; color:#729827; text-decoration:none}
+	.cs .houseText h5,.food .houseText h5,.house .houseText h5{ margin-bottom:15px}
+	.cs .mainAll h4,.food .mainAll h4,.house .mainAll h4{ font-size:20px; color:#9F8F27; font-family:"华文细黑"; margin-top:30px; margin-bottom:10px}
+		.cs .mainAll h4 span,.food .mainAll h4 span,.house .mainAll h4 span{ color:#659F27}
+	.cs .mainAll p,.food .mainAll p,.house .mainAll p{ text-indent:0px; margin-bottom:10px; color:#4A5234}
+	.cs .mainAll h4,.cs .mainAll p,.cs table.food .mainAll h4,.food .mainAll p,.food table,.house .mainAll h4,.house .mainAll p,.house table{ margin-left:30px}
+	.cs table,.food table,.cmsNav,.fun table,.house table{ width:597px; overflow:hidden; display:block}
+		.cs table th,.food table th,.cmsNav th,.house table th,.fun table th{ height:31px; line-height:31px; float:left; overflow:hidden}
+			.cs th a,.food th a,.cmsNav th a,.fun table th a,.house table th a{font-weight:normal; color:#729827; text-decoration:none}
 			.food th a.active,.cmsNav th a.active,.house table th a.active,.fun table th a.active{ color:#EF8100}
 			.food th a:hover,.cmsNav th a:hover,.fun table th a:hover,.house table th a:hover{ text-decoration:underline; color:#EF8100}
 		.food table .click,.cmsNav .click,.house table .click,.fun table .click{ background:url(../images/thh_6.jpg) no-repeat left top; width:131px}
@@ -294,7 +301,7 @@ a:hover{ text-decoration:none}
 		.cmsNav .user,.house table .user,.food table .user,.fun table .user{ background:url(../images/thh_8.jpg) no-repeat left top; width:113px}
 		.cmsNav .time,.house table .time,.fun table .time,.food table .time{  background:url(../images/thh_9.jpg) no-repeat left top; width:108px; text-align:center}
 		.cmsNav .reply,.house table .reply,.fun table .reply,.food table .reply{  background:url(../images/thh_10.jpg) no-repeat left top; width:135px}
-	.albums{ background:url(../images/88_3.jpg) no-repeat left top; width:700px;margin-bottom:20px; height:370px}
+	.albums{ background:url(../images/88_3.jpg) no-repeat left top; width:700px;margin-bottom:20px; height:370px;float:left;}
 		.albums .left{ width:388px; height:266px; margin-left:40px; margin-top:26px}
 			.albums .left .title{text-align:right; font-family:'华文楷体'; font-size:20px; color:#3D3D3D; background:none; width:360px; line-height:30px}
 			.albums .right{ float:left; width:198px; margin-left:20px; margin-top:10px} 

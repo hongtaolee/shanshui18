@@ -6,8 +6,8 @@
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag 'fckeditor/fckeditor' %>
     <title><%=(@title.blank? ? '西安农家乐' : "#{@title} -- 西安农家乐") %></title>
-    <meta content="西安山水农家乐欢迎您！独享翠华山自然山水，体验原生态农家生活，三星级独立院落住宿服务， 享宁静美景，品天然绿色，距翠华山景区大门口1000米，供您垂钓、烧烤更有多种娱乐贴心服务。" name="keywords"/>
-    <meta content="西安农家乐,西安农家乐网,翠华山农家乐,山水农家乐,"name="description"/> 
+    <meta name="description" content="西安山水农家乐欢迎您！独享翠华山自然山水,体验原生态农家生活,三星级独立院落住宿服务,享宁静美景,品天然绿色,距翠华山景区大门口1000米,供您垂钓、烧烤更有多种娱乐贴心服务" />
+	<meta name="keywords" content="西安农家乐,西安农家乐网,翠华山农家乐,山水农家乐,"/>
   </head>
   <body>
   <% @nav_class ||= 'index' %>
@@ -18,17 +18,18 @@
         <p class="top">
           <a href="javascript:addBookmark('西安山水农家乐', 'http://www.shanshui18.com/')">点击收藏</a> | 
           <a href="" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.shanshui18.com/');return(false);">设为首页</a> | 
-          <a target="_blank" href="http://blog.163.com/xycnjl/">我的博客</a>
+          <!-- <a target="_blank" href="http://blog.163.com/xycnjl/">我的博客</a> -->
         </p>
 	  		<div class="nav">
 	  			<ul>
-            <li class="indexnav"><a href="/index" title="首页" onmouseout="hideSubnav('index','<%=@nav_class%>')" onmouseover="showSubnav('index','<%=@nav_class%>');"> </a></li>
-	  				<li class="infonav"><a href="/info" title="农家简介" onmouseout="hideSubnav('info','<%=@nav_class%>')" onmouseover="showSubnav('info','<%=@nav_class%>');"> </a></li>
-	  				<li class="housenav"><a href="/house/1" title="温馨住宿" onmouseout="hideSubnav('house','<%=@nav_class%>')" onmouseover="showSubnav('house','<%=@nav_class%>');"> </a></li>
-	  				<li class="foodnav"><a href="/food/11" title="特色美食" onmouseout="hideSubnav('food','<%=@nav_class%>')" onmouseover="showSubnav('food','<%=@nav_class%>');"> </a></li>
-	  				<li class="funnav"><a href="/fun" title="风景娱乐" onmouseout="hideSubnav('fun','<%=@nav_class %>')" onmouseover="showSubnav('fun','<%=@nav_class%>');"> </a></li>
-	  				<li class="newsnav"><a href="/post" title="农家乐资讯" onmouseout="hideSubnav('new_wrap','<%=@nav_class%>')" onmouseover="showSubnav('new_wrap','<%=@nav_class%>');"> </a></li>
-	  				<li class="mynav"><a href="/lxwm" title="联系我们" onmouseout="hideSubnav('contact','<%=@nav_class%>')" onmouseover="showSubnav('contact','<%=@nav_class%>');"> </a></li>
+            <li class="indexnav"><a href="/index" title="首页" onmouseout="hideSubnav('index','<%=@nav_class%>')" onmouseover="showSubnav('index','<%=@nav_class%>');">首页 </a></li>
+	  				<li class="infonav"><a href="/info" title="农家简介" onmouseout="hideSubnav('info','<%=@nav_class%>')" onmouseover="showSubnav('info','<%=@nav_class%>');">农家简介 </a></li>
+	  				<li class="housenav"><a href="/house/1" title="温馨住宿" onmouseout="hideSubnav('house','<%=@nav_class%>')" onmouseover="showSubnav('house','<%=@nav_class%>');">温馨住宿 </a></li>
+	  				<li class="foodnav"><a href="/food/11" title="特色美食" onmouseout="hideSubnav('food','<%=@nav_class%>')" onmouseover="showSubnav('food','<%=@nav_class%>');"> 特色美食</a></li>
+					<li class="csnav"><a href="/cs/16" title="真人CS" onmouseout="hideSubnav('cs','<%=@nav_class%>')" onmouseover="showSubnav('cs','<%=@nav_class%>');"> 真人CS</a></li>
+	  				<li class="funnav"><a href="/fun" title="风景娱乐" onmouseout="hideSubnav('fun','<%=@nav_class %>')" onmouseover="showSubnav('fun','<%=@nav_class%>');"> 风景娱乐</a></li>
+	  				<li class="newsnav"><a href="/post" title="农家乐资讯" onmouseout="hideSubnav('new_wrap','<%=@nav_class%>')" onmouseover="showSubnav('new_wrap','<%=@nav_class%>');"> 农家乐资讯</a></li>
+	  				<li class="mynav"><a href="/lxwm" title="联系我们" onmouseout="hideSubnav('contact','<%=@nav_class%>')" onmouseover="showSubnav('contact','<%=@nav_class%>');"> 联系我们</a></li>
 	  			</ul>
 	  		</div>
         <div class="sidenav">
@@ -60,17 +61,18 @@
 	  		<p>
 	  			<a href="/info">关于我们</a>|
 	  			<a href="/footer">兼职招聘</a>|
-	  			<a href="/footer/zshz">招商合作</a>|
+	  			<!-- <a href="/footer/zshz">招商合作</a>| -->
 	  			<a href="/footer/bqsm">版权声明</a>|
 	  			<a href="/footer/map">网站地图</a>
 	  		</p>
         <p><a href="http://www.miibeian.gov.cn">陕ICP备09009896</a> | By<a href="http://www.danongjia.com" title="大农家" target="_blank">大农家旅游网</a></p>
-	  		<p class="ml5">西安市长安太乙宫杏园村120号 | Tel.(029)85898621 | <img src="/images/xin.gif" />50868470@qq.com</p>
+	  		<p class="ml5">西安市长安太乙宫杏园村120号 | Tel.18192298961 | <img src="/images/xin.gif" />50868470@qq.com</p>
 	  	</div>
 	  </div>
-
-    <div style="display:none;">
-		<script src="http://s19.cnzz.com/stat.php?id=2919489&web_id=2919489" language="JavaScript"></script>
-    </div>
+	  <script type="text/javascript">
+	  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb2bdd6e8e47bce663439bcc1256470b5' type='text/javascript'%3E%3C/script%3E"));
+	  </script>
+	<script src="http://s95.cnzz.com/stat.php?id=5328844&web_id=5328844&show=pic" language="JavaScript"></script>
   </body>
 </html>

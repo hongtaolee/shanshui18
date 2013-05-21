@@ -21,6 +21,11 @@ class PictureController < ApplicationController
       @title = "农家美食"
       @content = IndexContent.get_content(:food_info)
       render :action => "food"
+    elsif Const::CS_CATEGORY.keys.include?(@category)
+      @nav_class = "cs"
+      @title = "真人CS"
+      @content = IndexContent.get_content(:cs_info)
+      render :action => "cs"
     end
   end
 
