@@ -7,7 +7,7 @@ class Comment < ActiveRecord::Base
 
   validates_presence_of :content, :on => :create, :message => "内容不能为空"
   validates_presence_of :username, :on => :create, :message => "用户名不能为空"
-
+ 
   def validate
     if !self.content.blank? && self.content =~ /http|script/
       errors.add("content","含有非法内容")
