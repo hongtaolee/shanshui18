@@ -1,5 +1,7 @@
 class Feedback < ActiveRecord::Base
   before_save :process_html_content
+  after_create :sent_sms
+    
   validates_presence_of :content,  :message => "内容不能为空"
   validates_presence_of :username,  :message => "请留下您的名字"
 #  validates_presence_of :email,  :message => "请填写电子邮件地址"
@@ -34,6 +36,19 @@ class Feedback < ActiveRecord::Base
   end
 
   private
+  def sent_sms
+    content = <<-EOF
+    "#{self.username}-#{self.phone}-#{self.content}"
+    EOF
+    options = {
+      'message' => "#{content}【山水农家乐】",
+      'phone' => '18192298961'  #多个电话逗号隔开
+    }
+
+   YmtSmsT.process('sendsms', options)
+ 
+  end
+    
   def process_html_content
     self.html_content = simple_format(self.content)
     self.html_reply = simple_format(self.reply) if !self.reply.blank?
