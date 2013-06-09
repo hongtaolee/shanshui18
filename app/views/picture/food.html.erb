@@ -45,7 +45,30 @@
 						</div>
 					</div>
 				</div>
-				
+				<div class="houseText" id="f2" style="display:none;">
+					<h5><img src="/images/funr5.png"/>凉菜</h5>
+					<% if @content && !@content.content.blank? %>
+					<%=@content.content %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
+				</div>
+				<div class="houseText" id="f3" style="display:none;">
+					<h5><img src="/images/funr5.png"/>主食汤类</h5>
+					<% if @content && !@content.content_a.blank? %>
+					<%=@content.content_a %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
+				</div>
+				<div class="houseText" id="f4" style="display:none;">
+					<h5><img src="/images/funr5.png"/>包席菜品</h5>
+					<% if @content && !@content.content_b.blank? %>
+					<%=@content.content_b %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
+				</div>
 			</div>
 		</div>
 
