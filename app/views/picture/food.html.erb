@@ -16,14 +16,14 @@
 				</table>
 				<div class="albums" id="f1">
 					<ul id="slideshow">
-            <% @pictures.each do |p| %>
+						<% @pictures.each do |p| %>
 						<li>
-              <h3><%=h p.name %></h3>
-              <span><%=p.file_url %></span>
+							<h3><%=h p.name %></h3>
+							<span><%=p.file_url %></span>
 							<p></p>
-              <a href="javascript:void(0);"><img src="<%=p.file_url %>" alt="<%=h p.name %>" /></a>					
+							<a href="javascript:void(0);"><img src="<%=p.file_url %>" alt="<%=h p.name %>" /></a>					
 						</li>
-            <% end %>
+						<% end %>
 					</ul>
 					<div id="wrapper">
 						<div id="fullsize" style=" float:left;">
@@ -45,29 +45,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="houseText" id="f2">
+				<div class="houseText" id="f2" style="display:none;">
 					<h5><img src="/images/funr5.png"/>凉菜</h5>
-          <% if @content && !@content.content.blank? %>
-          <%=@content.content %>
-          <% else %>
-          <p>很抱歉，暂无，请随时关注我们的更新。</p>
-          <% end %>
+					<% if @content && !@content.content.blank? %>
+					<%=@content.content %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
 				</div>
-				<div class="houseText" id="f3">
+				<div class="houseText" id="f3" style="display:none;">
 					<h5><img src="/images/funr5.png"/>主食汤类</h5>
-          <% if @content && !@content.content_a.blank? %>
-          <%=@content.content_a %>
-          <% else %>
-          <p>很抱歉，暂无，请随时关注我们的更新。</p>
-          <% end %>
+					<% if @content && !@content.content_a.blank? %>
+					<%=@content.content_a %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
 				</div>
-				<div class="houseText" id="f4">
+				<div class="houseText" id="f4" style="display:none;">
 					<h5><img src="/images/funr5.png"/>包席菜品</h5>
-          <% if @content && !@content.content_b.blank? %>
-          <%=@content.content_b %>
-          <% else %>
-          <p>很抱歉，暂无，请随时关注我们的更新。</p>
-          <% end %>
+					<% if @content && !@content.content_b.blank? %>
+					<%=@content.content_b %>
+					<% else %>
+					<p>很抱歉，暂无，请随时关注我们的更新。</p>
+					<% end %>
 				</div>
 			</div>
 		</div>
